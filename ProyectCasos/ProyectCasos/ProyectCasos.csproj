@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -75,6 +75,12 @@
     <Compile Include="FormBorrarExpediente.Designer.cs">
       <DependentUpon>FormBorrarExpediente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditarCondicionJuridica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarCondicionJuridica.Designer.cs">
+      <DependentUpon>FormEditarCondicionJuridica.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditarExpediente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBorrarExpediente.resx">
       <DependentUpon>FormBorrarExpediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarCondicionJuridica.resx">
+      <DependentUpon>FormEditarCondicionJuridica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarExpediente.resx">
       <DependentUpon>FormEditarExpediente.cs</DependentUpon>
