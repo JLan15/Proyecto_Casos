@@ -326,6 +326,7 @@
             this.dtgCrearCondicion.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgCrearCondicion.Size = new System.Drawing.Size(744, 280);
             this.dtgCrearCondicion.TabIndex = 56;
+            this.dtgCrearCondicion.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgCrearCondicion_CellMouseClick);
             // 
             // panel2
             // 

@@ -18,6 +18,9 @@ namespace ProyectCasos
             InitializeComponent();
         }
 
+
+      
+
         public void CargarDatosDataGridViewCondicion()
         {
             Conexion cn = new Conexion();
@@ -78,6 +81,21 @@ namespace ProyectCasos
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             CargarDatosDataGridViewCondicion();
+        }
+
+        private void dtgCrearCondicion_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgCrearCondicion_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            FormEditarCondicionJuridica FrmEditar = new FormEditarCondicionJuridica();
+
+            FrmEditar.txtIdCondicionJuridica.Text= dtgCrearCondicion.CurrentRow.Cells[0].Value.ToString();
+            FrmEditar.txtNombreCondicionJuridica.Text= dtgCrearCondicion.CurrentRow.Cells[1].Value.ToString();
+        
+            FrmEditar.Show();
         }
     }
 }
