@@ -20,27 +20,26 @@ namespace ProyectCasos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            Conexion cn = new Conexion();
             Form1 Fr = new Form1();
             //SqlConnection cn = new SqlConnection("Data Source=DESKTOP-KNIF4SO;Initial Catalog=Proyecto_Casos;User ID=sa;Password=123");
             //SqlConnection cn = new SqlConnection("Data Source=DESKTOP-GBVPD8B;Initial Catalog=ProyectoCasos;User ID=sa;Password=1234");
-            SqlConnection cn = new SqlConnection("Data Source=DESKTOP-T0686SL;Initial Catalog=Proyecto_Casos;User ID=sa;Password=lfer");
+            //SqlConnection cn = new SqlConnection("Data Source=DESKTOP-T0686SL;Initial Catalog=Proyecto_Casos;User ID=sa;Password=lfer");
 
             try
             {
-                cn.Open();
-                SqlCommand com = new SqlCommand("exec dbo.SP_BorrarExpediente '" + int.Parse(txtIdExp.Text) + "'", cn);
+                cn.AbrirConeccion();
+                SqlCommand com = new SqlCommand("exec dbo.SP_BorrarExpediente '" + int.Parse(txtIdExp.Text) + "'", cn.AbrirConeccion());
                 com.ExecuteNonQuery();
                 Fr.CargarDatosDataGridView();
                 MessageBox.Show("Datos Eliminados Con Exito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Fr.CargarDatosDataGridView();
-                cn.Close();
+                cn.CerrarConeccion();
                 this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                cn.Close();
             }
         }
 
