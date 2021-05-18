@@ -215,6 +215,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(163, 41);
             this.btnEliminar.TabIndex = 59;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panel1
             // 

@@ -136,9 +136,9 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(46, 9);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(145, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(226, 20);
             this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "Guardar Proceso";
+            this.bunifuCustomLabel1.Text = "Guardar Condición Juridica";
             // 
             // label11
             // 

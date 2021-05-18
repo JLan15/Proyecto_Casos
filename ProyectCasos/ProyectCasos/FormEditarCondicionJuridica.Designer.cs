@@ -104,6 +104,7 @@
             this.btnCerrar.TabIndex = 74;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // pictureBox1
             // 
@@ -207,6 +208,7 @@
             this.Controls.Add(this.txtNombreCondicionJuridica);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEditarCondicionJuridica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditarCondicionJuridica";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

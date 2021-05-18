@@ -97,5 +97,11 @@ namespace ProyectCasos
         
             FrmEditar.Show();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            FormBorrarCondicionJuridica FrmBorrar = new FormBorrarCondicionJuridica();
+            FrmBorrar.Show();
+        }
     }
 }
