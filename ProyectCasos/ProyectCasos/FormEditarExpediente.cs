@@ -33,6 +33,13 @@ namespace ProyectCasos
             
         }
 
+        private void ListarCondicionJuridica()
+        {
+            ListadosCombobox LCombo = new ListadosCombobox();
+            cmbCondicionJuridica.DataSource = LCombo.ListarComboCondicionJuridica();
+            cmbCondicionJuridica.DisplayMember = "Nombre_Condicion";
+            cmbCondicionJuridica.ValueMember = "Id_Condicion";
+        }
         /*public void CargarDatosDataGridView()
         {
             Form1 Frm = new Form1();
@@ -67,7 +74,7 @@ namespace ProyectCasos
                     }
 
                     cn.AbrirConeccion();
-                    SqlCommand com = new SqlCommand("exec dbo.SP_ActualizarExpediente '" + int.Parse(txtIdExp.Text) + "','" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + cmbRepresentado.Text + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
+                    SqlCommand com = new SqlCommand("exec dbo.SP_ActualizarExpediente '" + int.Parse(txtIdExp.Text) + "','" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
                     com.ExecuteNonQuery();
                     //cn.Close();
                     MessageBox.Show("Datos Actualizados Con Exito", "Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -102,12 +109,17 @@ namespace ProyectCasos
 
         private void FormEditarExpediente_Load(object sender, EventArgs e)
         {
-
+            ListarCondicionJuridica();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

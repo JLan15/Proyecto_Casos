@@ -68,7 +68,7 @@ namespace ProyectCasos
             try
             {
                 //SqlConnection cn = new SqlConnection("Data Source=DESKTOP-KNIF4SO;Initial Catalog=Proyecto_Casos;User ID=sa;Password=123");
-                // SqlConnection cn = new SqlConnection("Data Source=DESKTOP-GBVPD8B;Initial Catalog=ProyectoCasos;User ID=sa;Password=1234");
+                //SqlConnection cn = new SqlConnection("Data Source=DESKTOP-GBVPD8B;Initial Catalog=ProyectoCasos;User ID=sa;Password=1234");
                 //SqlConnection cn = new SqlConnection("Data Source=DESKTOP-T0686SL;Initial Catalog=Proyecto_Casos;User ID=sa;Password=lfer");
                 Conexion cn = new Conexion();
 
@@ -130,7 +130,7 @@ namespace ProyectCasos
             FrmEditar.txtCodigo.Text = dtgCrearExpediente.CurrentRow.Cells[1].Value.ToString();
             FrmEditar.txtNum.Text = dtgCrearExpediente.CurrentRow.Cells[2].Value.ToString();
             FrmEditar.dtpFecha.Text = dtgCrearExpediente.CurrentRow.Cells[3].Value.ToString();
-            FrmEditar.cmbRepresentado.Text = dtgCrearExpediente.CurrentRow.Cells[4].Value.ToString();
+            FrmEditar.cmbCondicionJuridica.Text = dtgCrearExpediente.CurrentRow.Cells[4].Value.ToString();
             FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[5].Value.ToString();
             FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[6].Value.ToString();
             VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[7].Value.ToString();

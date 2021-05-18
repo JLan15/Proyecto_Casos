@@ -33,6 +33,7 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnEditar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -44,7 +45,7 @@
             this.dtpFechaHechos = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.txtLugarHechos = new System.Windows.Forms.TextBox();
-            this.cmbRepresentado = new System.Windows.Forms.ComboBox();
+            this.cmbCondicionJuridica = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -54,10 +55,9 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.txtNum = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.btnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -103,6 +103,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(588, 43);
             this.panel1.TabIndex = 91;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.ImageActive = null;
+            this.btnCerrar.Location = new System.Drawing.Point(548, 2);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(40, 34);
+            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrar.TabIndex = 74;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Zoom = 10;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // pictureBox1
             // 
@@ -222,20 +237,13 @@
             this.txtLugarHechos.Size = new System.Drawing.Size(304, 20);
             this.txtLugarHechos.TabIndex = 77;
             // 
-            // cmbRepresentado
+            // cmbCondicionJuridica
             // 
-            this.cmbRepresentado.FormattingEnabled = true;
-            this.cmbRepresentado.Items.AddRange(new object[] {
-            "Ofendido",
-            "Victima",
-            "Demandante",
-            "Denunciado",
-            "Imputado",
-            "Demandado"});
-            this.cmbRepresentado.Location = new System.Drawing.Point(272, 202);
-            this.cmbRepresentado.Name = "cmbRepresentado";
-            this.cmbRepresentado.Size = new System.Drawing.Size(227, 21);
-            this.cmbRepresentado.TabIndex = 76;
+            this.cmbCondicionJuridica.FormattingEnabled = true;
+            this.cmbCondicionJuridica.Location = new System.Drawing.Point(272, 202);
+            this.cmbCondicionJuridica.Name = "cmbCondicionJuridica";
+            this.cmbCondicionJuridica.Size = new System.Drawing.Size(227, 21);
+            this.cmbCondicionJuridica.TabIndex = 76;
             // 
             // label6
             // 
@@ -255,9 +263,10 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(52, 206);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 17);
+            this.label5.Size = new System.Drawing.Size(146, 17);
             this.label5.TabIndex = 86;
-            this.label5.Text = "Representado:";
+            this.label5.Text = "Condición Juridica:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // bunifuSeparator1
             // 
@@ -325,21 +334,6 @@
             this.txtCodigo.Size = new System.Drawing.Size(227, 20);
             this.txtCodigo.TabIndex = 73;
             // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(548, 2);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(40, 34);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 74;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Zoom = 10;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // FormEditarExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,7 +350,7 @@
             this.Controls.Add(this.dtpFechaHechos);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtLugarHechos);
-            this.Controls.Add(this.cmbRepresentado);
+            this.Controls.Add(this.cmbCondicionJuridica);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.bunifuSeparator1);
@@ -372,8 +366,8 @@
             this.Load += new System.EventHandler(this.FormEditarExpediente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,7 +389,7 @@
         public System.Windows.Forms.DateTimePicker dtpFechaHechos;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.TextBox txtLugarHechos;
-        public System.Windows.Forms.ComboBox cmbRepresentado;
+        public System.Windows.Forms.ComboBox cmbCondicionJuridica;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label5;
         public Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
