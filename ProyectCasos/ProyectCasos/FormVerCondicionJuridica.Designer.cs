@@ -292,9 +292,9 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(12, 9);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(147, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(155, 20);
             this.bunifuCustomLabel1.TabIndex = 1;
-            this.bunifuCustomLabel1.Text = "Tipo de Procesos";
+            this.bunifuCustomLabel1.Text = "Condición Juridica";
             // 
             // dtgCrearCondicion
             // 
@@ -327,6 +327,7 @@
             this.dtgCrearCondicion.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgCrearCondicion.Size = new System.Drawing.Size(744, 280);
             this.dtgCrearCondicion.TabIndex = 56;
+            this.dtgCrearCondicion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgCrearCondicion_CellContentClick_1);
             this.dtgCrearCondicion.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgCrearCondicion_CellMouseClick);
             // 
             // panel2

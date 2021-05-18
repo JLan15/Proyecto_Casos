@@ -11,29 +11,33 @@ using System.Windows.Forms;
 
 namespace ProyectCasos
 {
-    public partial class FormBorrarCondicionJuridica : Form
+    public partial class FormAgregarDireccionAsignada : Form
     {
-        public FormBorrarCondicionJuridica()
+        public FormAgregarDireccionAsignada()
         {
             InitializeComponent();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
             Conexion cn = new Conexion();
-            FormVerCondicionJuridica FrmVer = new FormVerCondicionJuridica();
+            FormVerCondicionJuridica FrmVerCondicion = new FormVerCondicionJuridica();
             //SqlConnection cn = new SqlConnection("Data Source=DESKTOP-KNIF4SO;Initial Catalog=Proyecto_Casos;User ID=sa;Password=123");
             //SqlConnection cn = new SqlConnection("Data Source=DESKTOP-GBVPD8B;Initial Catalog=ProyectoCasos;User ID=sa;Password=1234");
             //SqlConnection cn = new SqlConnection("Data Source=DESKTOP-T0686SL;Initial Catalog=Proyecto_Casos;User ID=sa;Password=lfer");
-
             try
             {
                 cn.AbrirConeccion();
-                SqlCommand com = new SqlCommand("exec dbo.SP_BorrarCondicionJuridica'" + int.Parse(txtIdCondicion.Text) + "'", cn.AbrirConeccion());
+                SqlCommand com = new SqlCommand("exec dbo.SP_CrearDireccionAsignada '" + int.Parse(txtIdDireccion.Text) + "', '" + txtNombreDireccion.Text + "'", cn.AbrirConeccion());
                 com.ExecuteNonQuery();
-                FrmVer.CargarDatosDataGridViewCondicion();
-                MessageBox.Show("Datos Eliminados Con Exito", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                FrmVer.CargarDatosDataGridViewCondicion();
+                FrmVerCondicion.CargarDatosDataGridViewCondicion();
+                MessageBox.Show("Datos Guardados Con Exito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Fr.CargarDatosDataGridView();
                 cn.CerrarConeccion();
                 this.Close();
             }
@@ -41,11 +45,6 @@ namespace ProyectCasos
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

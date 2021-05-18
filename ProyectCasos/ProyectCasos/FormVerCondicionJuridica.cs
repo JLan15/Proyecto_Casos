@@ -103,5 +103,10 @@ namespace ProyectCasos
             FormBorrarCondicionJuridica FrmBorrar = new FormBorrarCondicionJuridica();
             FrmBorrar.Show();
         }
+
+        private void dtgCrearCondicion_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -280,7 +280,7 @@
             this.bunifuFlatButton4.BackColor = System.Drawing.Color.LimeGreen;
             this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton4.BorderRadius = 7;
-            this.bunifuFlatButton4.ButtonText = "Asignaciónes";
+            this.bunifuFlatButton4.ButtonText = "Dirección Asignada";
             this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -304,10 +304,11 @@
             this.bunifuFlatButton4.selected = false;
             this.bunifuFlatButton4.Size = new System.Drawing.Size(218, 48);
             this.bunifuFlatButton4.TabIndex = 11;
-            this.bunifuFlatButton4.Text = "Asignaciónes";
+            this.bunifuFlatButton4.Text = "Dirección Asignada";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // bunifuFlatButton3
             // 

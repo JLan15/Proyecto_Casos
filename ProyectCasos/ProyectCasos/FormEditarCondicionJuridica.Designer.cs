@@ -70,7 +70,7 @@
             this.btnEditar.IdleFillColor = System.Drawing.Color.LimeGreen;
             this.btnEditar.IdleForecolor = System.Drawing.Color.White;
             this.btnEditar.IdleLineColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(211, 190);
+            this.btnEditar.Location = new System.Drawing.Point(211, 195);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(181, 41);
@@ -145,7 +145,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(52, 70);
+            this.label11.Location = new System.Drawing.Point(52, 75);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 17);
             this.label11.TabIndex = 110;
@@ -156,7 +156,7 @@
             this.txtIdCondicionJuridica.BackColor = System.Drawing.Color.White;
             this.txtIdCondicionJuridica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdCondicionJuridica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCondicionJuridica.Location = new System.Drawing.Point(272, 70);
+            this.txtIdCondicionJuridica.Location = new System.Drawing.Point(272, 75);
             this.txtIdCondicionJuridica.Name = "txtIdCondicionJuridica";
             this.txtIdCondicionJuridica.Size = new System.Drawing.Size(29, 20);
             this.txtIdCondicionJuridica.TabIndex = 92;
@@ -167,7 +167,7 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(-3, 169);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(-3, 174);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(595, 21);
             this.bunifuSeparator1.TabIndex = 105;
@@ -179,7 +179,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(52, 102);
+            this.label1.Location = new System.Drawing.Point(52, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(215, 17);
             this.label1.TabIndex = 102;
@@ -188,7 +188,7 @@
             // 
             // txtNombreCondicionJuridica
             // 
-            this.txtNombreCondicionJuridica.Location = new System.Drawing.Point(272, 102);
+            this.txtNombreCondicionJuridica.Location = new System.Drawing.Point(272, 107);
             this.txtNombreCondicionJuridica.Name = "txtNombreCondicionJuridica";
             this.txtNombreCondicionJuridica.Size = new System.Drawing.Size(227, 20);
             this.txtNombreCondicionJuridica.TabIndex = 93;

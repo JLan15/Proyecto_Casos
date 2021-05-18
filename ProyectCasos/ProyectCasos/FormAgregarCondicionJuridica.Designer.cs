@@ -70,7 +70,7 @@
             this.btnGuardar.IdleFillColor = System.Drawing.Color.LimeGreen;
             this.btnGuardar.IdleForecolor = System.Drawing.Color.White;
             this.btnGuardar.IdleLineColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(217, 177);
+            this.btnGuardar.Location = new System.Drawing.Point(216, 184);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(181, 41);
@@ -145,7 +145,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(54, 74);
+            this.label11.Location = new System.Drawing.Point(53, 81);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 17);
             this.label11.TabIndex = 90;
@@ -156,7 +156,7 @@
             this.txtIdCondicion.BackColor = System.Drawing.Color.White;
             this.txtIdCondicion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdCondicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCondicion.Location = new System.Drawing.Point(274, 74);
+            this.txtIdCondicion.Location = new System.Drawing.Point(273, 81);
             this.txtIdCondicion.Name = "txtIdCondicion";
             this.txtIdCondicion.Size = new System.Drawing.Size(29, 20);
             this.txtIdCondicion.TabIndex = 72;
@@ -167,15 +167,15 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(54, 106);
+            this.label1.Location = new System.Drawing.Point(53, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 17);
+            this.label1.Size = new System.Drawing.Size(215, 17);
             this.label1.TabIndex = 82;
-            this.label1.Text = "Nombre del Proceso";
+            this.label1.Text = "Condición Juridica Personal:";
             // 
             // txtNombreCondicion
             // 
-            this.txtNombreCondicion.Location = new System.Drawing.Point(274, 106);
+            this.txtNombreCondicion.Location = new System.Drawing.Point(273, 113);
             this.txtNombreCondicion.Name = "txtNombreCondicion";
             this.txtNombreCondicion.Size = new System.Drawing.Size(227, 20);
             this.txtNombreCondicion.TabIndex = 73;
@@ -185,7 +185,7 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 148);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(-1, 155);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(595, 21);
             this.bunifuSeparator1.TabIndex = 85;

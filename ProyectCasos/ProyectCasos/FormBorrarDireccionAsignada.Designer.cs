@@ -1,6 +1,6 @@
 ﻿namespace ProyectCasos
 {
-    partial class FormBorrarCondicionJuridica
+    partial class FormBorrarDireccionAsignada
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBorrarCondicionJuridica));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBorrarDireccionAsignada));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnEliminar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,7 +38,7 @@
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtIdCondicion = new System.Windows.Forms.TextBox();
+            this.txtIdDireccion = new System.Windows.Forms.TextBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -72,7 +72,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(163, 41);
-            this.btnEliminar.TabIndex = 117;
+            this.btnEliminar.TabIndex = 122;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -87,7 +87,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(341, 43);
-            this.panel1.TabIndex = 116;
+            this.panel1.TabIndex = 121;
             // 
             // btnCerrar
             // 
@@ -134,9 +134,9 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(46, 9);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(224, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(233, 20);
             this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "Eliminar Condición Juridica";
+            this.bunifuCustomLabel1.Text = "Eliminar Dirección Asignada";
             // 
             // label11
             // 
@@ -146,19 +146,19 @@
             this.label11.Location = new System.Drawing.Point(119, 78);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 17);
-            this.label11.TabIndex = 115;
+            this.label11.TabIndex = 120;
             this.label11.Text = "ID:";
             // 
-            // txtIdCondicion
+            // txtIdDireccion
             // 
-            this.txtIdCondicion.BackColor = System.Drawing.Color.White;
-            this.txtIdCondicion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdCondicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCondicion.Location = new System.Drawing.Point(157, 78);
-            this.txtIdCondicion.Name = "txtIdCondicion";
-            this.txtIdCondicion.Size = new System.Drawing.Size(60, 20);
-            this.txtIdCondicion.TabIndex = 113;
-            this.txtIdCondicion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIdDireccion.BackColor = System.Drawing.Color.White;
+            this.txtIdDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdDireccion.Location = new System.Drawing.Point(157, 78);
+            this.txtIdDireccion.Name = "txtIdDireccion";
+            this.txtIdDireccion.Size = new System.Drawing.Size(60, 20);
+            this.txtIdDireccion.TabIndex = 118;
+            this.txtIdDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bunifuSeparator1
             // 
@@ -168,11 +168,11 @@
             this.bunifuSeparator1.Location = new System.Drawing.Point(-1, 115);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(341, 21);
-            this.bunifuSeparator1.TabIndex = 114;
+            this.bunifuSeparator1.TabIndex = 119;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // FormBorrarCondicionJuridica
+            // FormBorrarDireccionAsignada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,12 +181,12 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtIdCondicion);
+            this.Controls.Add(this.txtIdDireccion);
             this.Controls.Add(this.bunifuSeparator1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormBorrarCondicionJuridica";
+            this.Name = "FormBorrarDireccionAsignada";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormBorrarCondicionJuridica";
+            this.Text = "FormBorrarDireccionAsignada";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -206,7 +206,7 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         public System.Windows.Forms.Label label11;
-        public System.Windows.Forms.TextBox txtIdCondicion;
+        public System.Windows.Forms.TextBox txtIdDireccion;
         public Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
     }
 }

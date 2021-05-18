@@ -11,11 +11,16 @@ using System.Windows.Forms;
 
 namespace ProyectCasos
 {
-    public partial class FormBorrarCondicionJuridica : Form
+    public partial class FormBorrarDireccionAsignada : Form
     {
-        public FormBorrarCondicionJuridica()
+        public FormBorrarDireccionAsignada()
         {
             InitializeComponent();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -29,7 +34,7 @@ namespace ProyectCasos
             try
             {
                 cn.AbrirConeccion();
-                SqlCommand com = new SqlCommand("exec dbo.SP_BorrarCondicionJuridica'" + int.Parse(txtIdCondicion.Text) + "'", cn.AbrirConeccion());
+                SqlCommand com = new SqlCommand("exec dbo.SP_BorrarDireccionAsignada'" + int.Parse(txtIdDireccion.Text) + "'", cn.AbrirConeccion());
                 com.ExecuteNonQuery();
                 FrmVer.CargarDatosDataGridViewCondicion();
                 MessageBox.Show("Datos Eliminados Con Exito", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -41,11 +46,6 @@ namespace ProyectCasos
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

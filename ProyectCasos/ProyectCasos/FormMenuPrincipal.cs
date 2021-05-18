@@ -117,6 +117,12 @@ namespace ProyectCasos
 
         }
 
+        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<FormVerDireccionAsignada>();
+            
+        }
+
         private void btnExpedientes_Click(object sender, EventArgs e)
         {
             AbrirFormularios<Form1>();
