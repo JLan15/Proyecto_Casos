@@ -38,7 +38,7 @@
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtIdExp = new System.Windows.Forms.TextBox();
+            this.txtIdCondicionJuridica = new System.Windows.Forms.TextBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombreCondicionJuridica = new System.Windows.Forms.TextBox();
@@ -76,6 +76,7 @@
             this.btnEditar.Size = new System.Drawing.Size(181, 41);
             this.btnEditar.TabIndex = 101;
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // panel1
             // 
@@ -134,9 +135,9 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(46, 9);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(152, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(208, 20);
             this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "Editar Expediente";
+            this.bunifuCustomLabel1.Text = "Editar Condicion Juridica";
             // 
             // label11
             // 
@@ -149,16 +150,16 @@
             this.label11.TabIndex = 110;
             this.label11.Text = "ID:";
             // 
-            // txtIdExp
+            // txtIdCondicionJuridica
             // 
-            this.txtIdExp.BackColor = System.Drawing.Color.White;
-            this.txtIdExp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdExp.Location = new System.Drawing.Point(272, 70);
-            this.txtIdExp.Name = "txtIdExp";
-            this.txtIdExp.Size = new System.Drawing.Size(29, 20);
-            this.txtIdExp.TabIndex = 92;
-            this.txtIdExp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIdCondicionJuridica.BackColor = System.Drawing.Color.White;
+            this.txtIdCondicionJuridica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdCondicionJuridica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdCondicionJuridica.Location = new System.Drawing.Point(272, 70);
+            this.txtIdCondicionJuridica.Name = "txtIdCondicionJuridica";
+            this.txtIdCondicionJuridica.Size = new System.Drawing.Size(29, 20);
+            this.txtIdCondicionJuridica.TabIndex = 92;
+            this.txtIdCondicionJuridica.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bunifuSeparator1
             // 
@@ -200,7 +201,7 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtIdExp);
+            this.Controls.Add(this.txtIdCondicionJuridica);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombreCondicionJuridica);
@@ -226,7 +227,7 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         public System.Windows.Forms.Label label11;
-        public System.Windows.Forms.TextBox txtIdExp;
+        public System.Windows.Forms.TextBox txtIdCondicionJuridica;
         public Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtNombreCondicionJuridica;

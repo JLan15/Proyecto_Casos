@@ -10,8 +10,8 @@ namespace ProyectCasos
 {
     class Conexion
     {
-        static private string CadenaConeccion = "Data Source=DESKTOP-GBVPD8B;Initial Catalog=ProyectoCasos;User ID=sa;Password=1234";
-        //static private string CadenaConeccion = "Data Source=DESKTOP-T0686SL;Initial Catalog=Proyecto_Casos;User ID=sa;Password=lfer";
+       // static private string CadenaConeccion = "Data Source=DESKTOP-GBVPD8B;Initial Catalog=ProyectoCasos;User ID=sa;Password=1234";
+        static private string CadenaConeccion = "Data Source=DESKTOP-T0686SL;Initial Catalog=Proyecto_Casos;User ID=sa;Password=lfer";
         private SqlConnection Coneccion = new SqlConnection(CadenaConeccion); 
 
         public SqlConnection AbrirConeccion()
