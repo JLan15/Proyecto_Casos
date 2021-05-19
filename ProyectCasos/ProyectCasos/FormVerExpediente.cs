@@ -126,14 +126,15 @@ namespace ProyectCasos
             FormEditarExpediente FrmEditar = new FormEditarExpediente();
 
             FrmEditar.txtIdExp.Text = dtgCrearExpediente.CurrentRow.Cells[0].Value.ToString();
-            FrmEditar.txtCodigo.Text = dtgCrearExpediente.CurrentRow.Cells[1].Value.ToString();
+            //FrmEditar.txtCodigo.Text = dtgCrearExpediente.CurrentRow.Cells[1].Value.ToString();
             FrmEditar.txtCodigo.Text = dtgCrearExpediente.CurrentRow.Cells[1].Value.ToString();
             FrmEditar.txtNum.Text = dtgCrearExpediente.CurrentRow.Cells[2].Value.ToString();
             FrmEditar.dtpFecha.Text = dtgCrearExpediente.CurrentRow.Cells[3].Value.ToString();
             FrmEditar.cmbCondicionJuridica.Text = dtgCrearExpediente.CurrentRow.Cells[4].Value.ToString();
-            FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[5].Value.ToString();
-            FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[6].Value.ToString();
-            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[7].Value.ToString();
+            FrmEditar.cmbDireccionAsignada.Text = dtgCrearExpediente.CurrentRow.Cells[5].Value.ToString();
+            FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[6].Value.ToString();
+            FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[7].Value.ToString();
+            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[8].Value.ToString();
 
             if (VariablesGlobales.status == "Activo")
             {

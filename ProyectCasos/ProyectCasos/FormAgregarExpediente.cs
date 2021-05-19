@@ -44,6 +44,14 @@ namespace ProyectCasos
             cmbCondicionJuridica.DisplayMember = "Nombre_Condicion";
             cmbCondicionJuridica.ValueMember = "Id_Condicion";
         }
+
+        private void ListarDireccionAsignada()
+        {
+            ListadosCombobox LCombo = new ListadosCombobox();
+            cmbDireccionAsignada.DataSource = LCombo.ListarComboDireccionAsignada();
+            cmbDireccionAsignada.DisplayMember = "Nombre_Direccion";
+            cmbDireccionAsignada.ValueMember = "Id_Direccion";
+        }
         public void btnGuardar_Click(object sender, EventArgs e)
         {
             Form1 Fr = new Form1();
@@ -65,7 +73,7 @@ namespace ProyectCasos
                
 
                 cn.AbrirConeccion();
-                SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
+                SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
                 com.ExecuteNonQuery();
                 Fr.CargarDatosDataGridView();
                 MessageBox.Show("Datos Guardados Con Exito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -100,6 +108,7 @@ namespace ProyectCasos
             Form1 Fr = new Form1();
             Fr.CargarDatosDataGridView();
             ListarCondicionJuridica();
+            ListarDireccionAsignada();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
