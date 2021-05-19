@@ -245,7 +245,7 @@
             this.bunifuFlatButton5.BackColor = System.Drawing.Color.LimeGreen;
             this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton5.BorderRadius = 7;
-            this.bunifuFlatButton5.ButtonText = "Instituciones";
+            this.bunifuFlatButton5.ButtonText = "Juzgado/Fiscalía";
             this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -269,10 +269,11 @@
             this.bunifuFlatButton5.selected = false;
             this.bunifuFlatButton5.Size = new System.Drawing.Size(218, 48);
             this.bunifuFlatButton5.TabIndex = 12;
-            this.bunifuFlatButton5.Text = "Instituciones";
+            this.bunifuFlatButton5.Text = "Juzgado/Fiscalía";
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton5.Click += new System.EventHandler(this.bunifuFlatButton5_Click);
             // 
             // bunifuFlatButton4
             // 

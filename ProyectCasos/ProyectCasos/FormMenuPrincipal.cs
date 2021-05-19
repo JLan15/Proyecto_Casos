@@ -123,6 +123,11 @@ namespace ProyectCasos
             
         }
 
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<FormVerJuzgadoFiscalia>();
+        }
+
         private void btnExpedientes_Click(object sender, EventArgs e)
         {
             AbrirFormularios<Form1>();

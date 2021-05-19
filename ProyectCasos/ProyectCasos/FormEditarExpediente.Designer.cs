@@ -182,7 +182,7 @@
             this.rdbInactivo.AutoSize = true;
             this.rdbInactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbInactivo.ForeColor = System.Drawing.Color.White;
-            this.rdbInactivo.Location = new System.Drawing.Point(372, 340);
+            this.rdbInactivo.Location = new System.Drawing.Point(372, 342);
             this.rdbInactivo.Name = "rdbInactivo";
             this.rdbInactivo.Size = new System.Drawing.Size(71, 17);
             this.rdbInactivo.TabIndex = 80;
@@ -195,7 +195,7 @@
             this.rdbActivo.AutoSize = true;
             this.rdbActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbActivo.ForeColor = System.Drawing.Color.White;
-            this.rdbActivo.Location = new System.Drawing.Point(271, 340);
+            this.rdbActivo.Location = new System.Drawing.Point(271, 342);
             this.rdbActivo.Name = "rdbActivo";
             this.rdbActivo.Size = new System.Drawing.Size(61, 17);
             this.rdbActivo.TabIndex = 79;
@@ -208,7 +208,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(52, 340);
+            this.label8.Location = new System.Drawing.Point(52, 342);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 17);
             this.label8.TabIndex = 89;
@@ -216,7 +216,7 @@
             // 
             // dtpFechaHechos
             // 
-            this.dtpFechaHechos.Location = new System.Drawing.Point(271, 304);
+            this.dtpFechaHechos.Location = new System.Drawing.Point(271, 306);
             this.dtpFechaHechos.Name = "dtpFechaHechos";
             this.dtpFechaHechos.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaHechos.TabIndex = 78;
@@ -226,7 +226,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(52, 307);
+            this.label7.Location = new System.Drawing.Point(52, 309);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 17);
             this.label7.TabIndex = 88;
@@ -234,7 +234,7 @@
             // 
             // txtLugarHechos
             // 
-            this.txtLugarHechos.Location = new System.Drawing.Point(271, 268);
+            this.txtLugarHechos.Location = new System.Drawing.Point(271, 270);
             this.txtLugarHechos.Name = "txtLugarHechos";
             this.txtLugarHechos.Size = new System.Drawing.Size(304, 20);
             this.txtLugarHechos.TabIndex = 77;
@@ -242,7 +242,7 @@
             // cmbCondicionJuridica
             // 
             this.cmbCondicionJuridica.FormattingEnabled = true;
-            this.cmbCondicionJuridica.Location = new System.Drawing.Point(272, 202);
+            this.cmbCondicionJuridica.Location = new System.Drawing.Point(272, 201);
             this.cmbCondicionJuridica.Name = "cmbCondicionJuridica";
             this.cmbCondicionJuridica.Size = new System.Drawing.Size(227, 21);
             this.cmbCondicionJuridica.TabIndex = 76;
@@ -252,7 +252,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(52, 271);
+            this.label6.Location = new System.Drawing.Point(52, 273);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 17);
             this.label6.TabIndex = 87;
@@ -263,7 +263,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(52, 206);
+            this.label5.Location = new System.Drawing.Point(52, 205);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 17);
             this.label5.TabIndex = 86;
@@ -339,7 +339,7 @@
             // cmbDireccionAsignada
             // 
             this.cmbDireccionAsignada.FormattingEnabled = true;
-            this.cmbDireccionAsignada.Location = new System.Drawing.Point(272, 234);
+            this.cmbDireccionAsignada.Location = new System.Drawing.Point(272, 236);
             this.cmbDireccionAsignada.Name = "cmbDireccionAsignada";
             this.cmbDireccionAsignada.Size = new System.Drawing.Size(227, 21);
             this.cmbDireccionAsignada.TabIndex = 92;
@@ -349,7 +349,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(52, 238);
+            this.label4.Location = new System.Drawing.Point(52, 240);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(160, 17);
             this.label4.TabIndex = 93;

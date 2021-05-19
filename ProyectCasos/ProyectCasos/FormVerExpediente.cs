@@ -20,12 +20,6 @@ namespace ProyectCasos
             InitializeComponent();
         }
 
-        public void ListarCondicionJur()
-        {
-
-
-        }
-
         public void CargarDatosDataGridView()
         {
             //SqlConnection cn = new SqlConnection("Data Source=DESKTOP-KNIF4SO;Initial Catalog=Proyecto_Casos;User ID=sa;Password=123");

@@ -1,6 +1,6 @@
 ﻿namespace ProyectCasos
 {
-    partial class FormAgregarDireccionAsignada
+    partial class FormAgregarJuzgadoFiscalia
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregarDireccionAsignada));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregarJuzgadoFiscalia));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnGuardar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,10 +38,10 @@
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtIdDireccion = new System.Windows.Forms.TextBox();
+            this.txtIdJuzgado = new System.Windows.Forms.TextBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNombreDireccion = new System.Windows.Forms.TextBox();
+            this.txtNombreJuzgado = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,7 +74,7 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(181, 41);
-            this.btnGuardar.TabIndex = 94;
+            this.btnGuardar.TabIndex = 101;
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -89,7 +89,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(592, 43);
-            this.panel1.TabIndex = 98;
+            this.panel1.TabIndex = 105;
             // 
             // btnCerrar
             // 
@@ -136,9 +136,9 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(46, 9);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(235, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(214, 20);
             this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "Guardar Dirección Asignada";
+            this.bunifuCustomLabel1.Text = "Guardar Juzgado/Fiscalía";
             // 
             // label11
             // 
@@ -148,19 +148,19 @@
             this.label11.Location = new System.Drawing.Point(53, 85);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 17);
-            this.label11.TabIndex = 97;
+            this.label11.TabIndex = 104;
             this.label11.Text = "ID:";
             // 
-            // txtIdDireccion
+            // txtIdJuzgado
             // 
-            this.txtIdDireccion.BackColor = System.Drawing.Color.White;
-            this.txtIdDireccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdDireccion.Location = new System.Drawing.Point(273, 85);
-            this.txtIdDireccion.Name = "txtIdDireccion";
-            this.txtIdDireccion.Size = new System.Drawing.Size(29, 20);
-            this.txtIdDireccion.TabIndex = 92;
-            this.txtIdDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIdJuzgado.BackColor = System.Drawing.Color.White;
+            this.txtIdJuzgado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdJuzgado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdJuzgado.Location = new System.Drawing.Point(273, 85);
+            this.txtIdJuzgado.Name = "txtIdJuzgado";
+            this.txtIdJuzgado.Size = new System.Drawing.Size(29, 20);
+            this.txtIdJuzgado.TabIndex = 99;
+            this.txtIdJuzgado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bunifuSeparator1
             // 
@@ -170,7 +170,7 @@
             this.bunifuSeparator1.Location = new System.Drawing.Point(-1, 159);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(595, 21);
-            this.bunifuSeparator1.TabIndex = 96;
+            this.bunifuSeparator1.TabIndex = 103;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
@@ -181,18 +181,18 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(53, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 17);
-            this.label1.TabIndex = 95;
-            this.label1.Text = "Dirección/Asignación:";
+            this.label1.Size = new System.Drawing.Size(134, 17);
+            this.label1.TabIndex = 102;
+            this.label1.Text = "Juzgado/Fiscalía:";
             // 
-            // txtNombreDireccion
+            // txtNombreJuzgado
             // 
-            this.txtNombreDireccion.Location = new System.Drawing.Point(273, 117);
-            this.txtNombreDireccion.Name = "txtNombreDireccion";
-            this.txtNombreDireccion.Size = new System.Drawing.Size(227, 20);
-            this.txtNombreDireccion.TabIndex = 93;
+            this.txtNombreJuzgado.Location = new System.Drawing.Point(273, 117);
+            this.txtNombreJuzgado.Name = "txtNombreJuzgado";
+            this.txtNombreJuzgado.Size = new System.Drawing.Size(283, 20);
+            this.txtNombreJuzgado.TabIndex = 100;
             // 
-            // FormAgregarDireccionAsignada
+            // FormAgregarJuzgadoFiscalia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -201,14 +201,14 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtIdDireccion);
+            this.Controls.Add(this.txtIdJuzgado);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNombreDireccion);
+            this.Controls.Add(this.txtNombreJuzgado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormAgregarDireccionAsignada";
+            this.Name = "FormAgregarJuzgadoFiscalia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAgregarDireccionAsignada";
+            this.Text = "FormAgregarJuzgadoFiscalia";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -228,9 +228,9 @@
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtIdDireccion;
+        private System.Windows.Forms.TextBox txtIdJuzgado;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNombreDireccion;
+        private System.Windows.Forms.TextBox txtNombreJuzgado;
     }
 }
