@@ -47,6 +47,22 @@ namespace ProyectCasos
             cmbDireccionAsignada.DisplayMember = "Nombre_Direccion";
             cmbDireccionAsignada.ValueMember = "Id_Direccion";
         }
+
+        private void ListarJuzgadoFiscalia()
+        {
+            ListadosCombobox LCombo = new ListadosCombobox();
+            cmbJuzgadoFiscalia.DataSource = LCombo.ListarComboJuzgadoFiscalia();
+            cmbJuzgadoFiscalia.DisplayMember = "Nombre_Juzgado";
+            cmbJuzgadoFiscalia.ValueMember = "Id_Juzgado";
+        }
+
+        private void ListarEstado()
+        {
+            ListadosCombobox LCombo = new ListadosCombobox();
+            cmbEstadoCaso.DataSource = LCombo.ListarComboEstadoCasos();
+            cmbEstadoCaso.DisplayMember = "Nombre_Estado";
+            cmbEstadoCaso.ValueMember = "Id_Estado";
+        }
         /*public void CargarDatosDataGridView()
         {
             Form1 Frm = new Form1();
@@ -81,7 +97,7 @@ namespace ProyectCasos
                     }
 
                     cn.AbrirConeccion();
-                    SqlCommand com = new SqlCommand("exec dbo.SP_ActualizarExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
+                    SqlCommand com = new SqlCommand("exec dbo.SP_ActualizarExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
                     com.ExecuteNonQuery();
                     //cn.Close();
                     MessageBox.Show("Datos Actualizados Con Exito", "Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -118,6 +134,8 @@ namespace ProyectCasos
         {
             ListarCondicionJuridica();
             ListarDireccionAsignada();
+            ListarJuzgadoFiscalia();
+            ListarEstado();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

@@ -117,18 +117,27 @@ namespace ProyectCasos
 
         private void dtgCrearExpediente_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            FormEditarExpediente FrmEditar = new FormEditarExpediente();
+            /*FormEditarExpediente FrmEditar = new FormEditarExpediente();
+
+            string Fecha;
+            string FechaHechos;
+
+            Fecha = Convert.ToString(FrmEditar.dtpFecha.Text);
+            FechaHechos = Convert.ToString(FrmEditar.dtpFechaHechos.Text);
 
             FrmEditar.txtIdExp.Text = dtgCrearExpediente.CurrentRow.Cells[0].Value.ToString();
-            //FrmEditar.txtCodigo.Text = dtgCrearExpediente.CurrentRow.Cells[1].Value.ToString();
             FrmEditar.txtCodigo.Text = dtgCrearExpediente.CurrentRow.Cells[1].Value.ToString();
             FrmEditar.txtNum.Text = dtgCrearExpediente.CurrentRow.Cells[2].Value.ToString();
+            //Fecha = dtgCrearExpediente.CurrentRow.Cells[3].Value.ToString();
             FrmEditar.dtpFecha.Text = dtgCrearExpediente.CurrentRow.Cells[3].Value.ToString();
             FrmEditar.cmbCondicionJuridica.Text = dtgCrearExpediente.CurrentRow.Cells[4].Value.ToString();
             FrmEditar.cmbDireccionAsignada.Text = dtgCrearExpediente.CurrentRow.Cells[5].Value.ToString();
-            FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[6].Value.ToString();
-            FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[7].Value.ToString();
-            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[8].Value.ToString();
+            FrmEditar.cmbJuzgadoFiscalia.Text = dtgCrearExpediente.CurrentRow.Cells[6].Value.ToString();
+            FrmEditar.cmbEstadoCaso.Text = dtgCrearExpediente.CurrentRow.Cells[7].Value.ToString();
+            FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[8].Value.ToString();
+            FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[9].Value.ToString();
+            //FechaHechos = dtgCrearExpediente.CurrentRow.Cells[9].Value.ToString();
+            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[10].Value.ToString();
 
             if (VariablesGlobales.status == "Activo")
             {
@@ -139,7 +148,7 @@ namespace ProyectCasos
                 FrmEditar.rdbInactivo.Checked = true;
             }
 
-            FrmEditar.Show();
+            FrmEditar.Show();*/
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -150,7 +159,25 @@ namespace ProyectCasos
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            excel.Application App = new excel.Application();
+            dtgCrearExpediente.SelectAll();
+            DataObject copydata = dtgCrearExpediente.GetClipboardContent();
+            if (copydata != null) Clipboard.SetDataObject(copydata);
+            Microsoft.Office.Interop.Excel.Application xlapp = new Microsoft.Office.Interop.Excel.Application();
+            xlapp.Visible = true;
+            Microsoft.Office.Interop.Excel.Workbook xlWbook;
+            Microsoft.Office.Interop.Excel.Worksheet xlsheet;
+            object miseddata = System.Reflection.Missing.Value;
+            xlWbook = xlapp.Workbooks.Add(miseddata);
+
+            xlsheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWbook.Worksheets.get_Item(1);
+            Microsoft.Office.Interop.Excel.Range xlr = (Microsoft.Office.Interop.Excel.Range)xlsheet.Cells[1, 1];
+            xlr.Select();
+
+            xlsheet.PasteSpecial(xlr, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            xlsheet.Columns.AutoFit();
+                          
+
+            /*excel.Application App = new excel.Application();
             excel.Workbook workbook = App.Workbooks.Add();
             excel.Worksheet worksheet = null;
 
@@ -168,13 +195,34 @@ namespace ProyectCasos
             for (int j = 0; j < dtgCrearExpediente.Columns.Count-1; j++)
             {
                 for (int i = 0; i < dtgCrearExpediente.Columns.Count; i++)
-                {
-                    worksheet.Cells[j+2, i + 1] = dtgCrearExpediente.Rows[j].Cells[i].Value.ToString();
+                {            
+                  worksheet.Cells[j + 2, i + 1] = dtgCrearExpediente.Rows[j].Cells[i].Value.ToString();          
                 } 
-            }
+            }/*
 
             worksheet.Columns.AutoFit();
             //worksheet.Cells.AutoFit();
+
+            /*if(dtgCrearExpediente.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.Application xcelApp = new Microsoft.Office.Interop.Excel.Application();
+                xcelApp.Application.Workbooks.Add(Type.Missing);
+
+                for (int i = 1; i < dtgCrearExpediente.Columns.Count + 1; i++)
+                {
+                    xcelApp.Cells[1, i] = dtgCrearExpediente.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < dtgCrearExpediente.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dtgCrearExpediente.Columns.Count; i++)
+                    {
+                        xcelApp.Cells[i + 2, j + 1] = dtgCrearExpediente.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+                xcelApp.Columns.AutoFit();
+                xcelApp.Visible = true;
+            }*/
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -230,6 +278,42 @@ namespace ProyectCasos
         private void bunifuSeparator1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtgCrearExpediente_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            FormEditarExpediente FrmEditar = new FormEditarExpediente();
+
+            string Fecha;
+            string FechaHechos;
+
+            Fecha = Convert.ToString(FrmEditar.dtpFecha.Text);
+            FechaHechos = Convert.ToString(FrmEditar.dtpFechaHechos.Text);
+
+            FrmEditar.txtIdExp.Text = dtgCrearExpediente.CurrentRow.Cells[0].Value.ToString();
+            FrmEditar.txtCodigo.Text = dtgCrearExpediente.CurrentRow.Cells[1].Value.ToString();
+            FrmEditar.txtNum.Text = dtgCrearExpediente.CurrentRow.Cells[2].Value.ToString();
+            //Fecha = dtgCrearExpediente.CurrentRow.Cells[3].Value.ToString();
+            FrmEditar.dtpFecha.Text = dtgCrearExpediente.CurrentRow.Cells[3].Value.ToString();
+            FrmEditar.cmbCondicionJuridica.Text = dtgCrearExpediente.CurrentRow.Cells[4].Value.ToString();
+            FrmEditar.cmbDireccionAsignada.Text = dtgCrearExpediente.CurrentRow.Cells[5].Value.ToString();
+            FrmEditar.cmbJuzgadoFiscalia.Text = dtgCrearExpediente.CurrentRow.Cells[6].Value.ToString();
+            FrmEditar.cmbEstadoCaso.Text = dtgCrearExpediente.CurrentRow.Cells[7].Value.ToString();
+            FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[8].Value.ToString();
+            FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[9].Value.ToString();
+            //FechaHechos = dtgCrearExpediente.CurrentRow.Cells[9].Value.ToString();
+            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[10].Value.ToString();
+
+            if (VariablesGlobales.status == "Activo")
+            {
+                FrmEditar.rdbActivo.Checked = true;
+            }
+            if (VariablesGlobales.status == "Inactivo")
+            {
+                FrmEditar.rdbInactivo.Checked = true;
+            }
+
+            FrmEditar.Show();
         }
     }
 }

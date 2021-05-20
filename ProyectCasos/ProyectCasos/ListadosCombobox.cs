@@ -41,5 +41,34 @@ namespace ProyectCasos
             com.Connection = con.CerrarConeccion();
             return Tabla;
         }
+<<<<<<< 0bafd4ca5d326d066c0c3617ad7a17e1c4990a71
+=======
+
+        public DataTable ListarComboJuzgadoFiscalia()
+        {
+            DataTable Tabla = new DataTable();
+            com.Connection = con.AbrirConeccion();
+            com.CommandText = "SP_ListarJuzgadoFiscalia";
+            com.CommandType = CommandType.StoredProcedure;
+            LeerFilas = com.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            LeerFilas.Close();
+            com.Connection = con.CerrarConeccion();
+            return Tabla;
+        }
+
+        public DataTable ListarComboEstadoCasos()
+        {
+            DataTable Tabla = new DataTable();
+            com.Connection = con.AbrirConeccion();
+            com.CommandText = "SP_ListarEstadoCasos";
+            com.CommandType = CommandType.StoredProcedure;
+            LeerFilas = com.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            LeerFilas.Close();
+            com.Connection = con.CerrarConeccion();
+            return Tabla;
+        }
+>>>>>>> Corrección a Exportacion de Excel en Modulo Expedientes
     }
 }

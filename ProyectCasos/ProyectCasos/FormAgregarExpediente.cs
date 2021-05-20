@@ -52,6 +52,25 @@ namespace ProyectCasos
             cmbDireccionAsignada.DisplayMember = "Nombre_Direccion";
             cmbDireccionAsignada.ValueMember = "Id_Direccion";
         }
+<<<<<<< 0bafd4ca5d326d066c0c3617ad7a17e1c4990a71
+=======
+
+        private void ListarJuzgadoFiscalia()
+        {
+            ListadosCombobox LCombo = new ListadosCombobox();
+            cmbJuzgadoFiscalia.DataSource = LCombo.ListarComboJuzgadoFiscalia();
+            cmbJuzgadoFiscalia.DisplayMember = "Nombre_Juzgado";
+            cmbJuzgadoFiscalia.ValueMember = "Id_Juzgado";
+        }
+
+        private void ListarEstado()
+        {
+            ListadosCombobox LCombo = new ListadosCombobox();
+            cmbEstadoCaso.DataSource = LCombo.ListarComboEstadoCasos();
+            cmbEstadoCaso.DisplayMember = "Nombre_Estado";
+            cmbEstadoCaso.ValueMember = "Id_Estado";
+        }
+>>>>>>> Corrección a Exportacion de Excel en Modulo Expedientes
         public void btnGuardar_Click(object sender, EventArgs e)
         {
             Form1 Fr = new Form1();
@@ -73,7 +92,11 @@ namespace ProyectCasos
                
 
                 cn.AbrirConeccion();
+<<<<<<< 0bafd4ca5d326d066c0c3617ad7a17e1c4990a71
                 SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
+=======
+                SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
+>>>>>>> Corrección a Exportacion de Excel en Modulo Expedientes
                 com.ExecuteNonQuery();
                 Fr.CargarDatosDataGridView();
                 MessageBox.Show("Datos Guardados Con Exito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -109,6 +132,11 @@ namespace ProyectCasos
             Fr.CargarDatosDataGridView();
             ListarCondicionJuridica();
             ListarDireccionAsignada();
+<<<<<<< 0bafd4ca5d326d066c0c3617ad7a17e1c4990a71
+=======
+            ListarJuzgadoFiscalia();
+            ListarEstado();
+>>>>>>> Corrección a Exportacion de Excel en Modulo Expedientes
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
