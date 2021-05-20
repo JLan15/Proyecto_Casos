@@ -299,10 +299,11 @@ namespace ProyectCasos
             FrmEditar.cmbDireccionAsignada.Text = dtgCrearExpediente.CurrentRow.Cells[5].Value.ToString();
             FrmEditar.cmbJuzgadoFiscalia.Text = dtgCrearExpediente.CurrentRow.Cells[6].Value.ToString();
             FrmEditar.cmbEstadoCaso.Text = dtgCrearExpediente.CurrentRow.Cells[7].Value.ToString();
-            FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[8].Value.ToString();
-            FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[9].Value.ToString();
+            FrmEditar.cmbRango.Text = dtgCrearExpediente.CurrentRow.Cells[8].Value.ToString();
+            FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[9].Value.ToString();
+            FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[10].Value.ToString();
             //FechaHechos = dtgCrearExpediente.CurrentRow.Cells[9].Value.ToString();
-            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[10].Value.ToString();
+            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[11].Value.ToString();
 
             if (VariablesGlobales.status == "Activo")
             {

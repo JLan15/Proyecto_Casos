@@ -61,6 +61,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.cmbJuzgadoFiscalia = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.cmbRango = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,7 +91,7 @@
             this.btnEditar.IdleFillColor = System.Drawing.Color.LimeGreen;
             this.btnEditar.IdleForecolor = System.Drawing.Color.White;
             this.btnEditar.IdleLineColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(211, 471);
+            this.btnEditar.Location = new System.Drawing.Point(211, 501);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(181, 41);
@@ -186,7 +188,7 @@
             this.rdbInactivo.AutoSize = true;
             this.rdbInactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbInactivo.ForeColor = System.Drawing.Color.White;
-            this.rdbInactivo.Location = new System.Drawing.Point(372, 414);
+            this.rdbInactivo.Location = new System.Drawing.Point(372, 448);
             this.rdbInactivo.Name = "rdbInactivo";
             this.rdbInactivo.Size = new System.Drawing.Size(71, 17);
             this.rdbInactivo.TabIndex = 80;
@@ -199,7 +201,7 @@
             this.rdbActivo.AutoSize = true;
             this.rdbActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbActivo.ForeColor = System.Drawing.Color.White;
-            this.rdbActivo.Location = new System.Drawing.Point(271, 414);
+            this.rdbActivo.Location = new System.Drawing.Point(271, 448);
             this.rdbActivo.Name = "rdbActivo";
             this.rdbActivo.Size = new System.Drawing.Size(61, 17);
             this.rdbActivo.TabIndex = 79;
@@ -212,7 +214,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(52, 414);
+            this.label8.Location = new System.Drawing.Point(52, 448);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 17);
             this.label8.TabIndex = 89;
@@ -220,7 +222,7 @@
             // 
             // dtpFechaHechos
             // 
-            this.dtpFechaHechos.Location = new System.Drawing.Point(271, 378);
+            this.dtpFechaHechos.Location = new System.Drawing.Point(271, 412);
             this.dtpFechaHechos.Name = "dtpFechaHechos";
             this.dtpFechaHechos.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaHechos.TabIndex = 78;
@@ -230,7 +232,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(52, 381);
+            this.label7.Location = new System.Drawing.Point(52, 415);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 17);
             this.label7.TabIndex = 88;
@@ -238,7 +240,7 @@
             // 
             // txtLugarHechos
             // 
-            this.txtLugarHechos.Location = new System.Drawing.Point(271, 342);
+            this.txtLugarHechos.Location = new System.Drawing.Point(271, 376);
             this.txtLugarHechos.Name = "txtLugarHechos";
             this.txtLugarHechos.Size = new System.Drawing.Size(304, 20);
             this.txtLugarHechos.TabIndex = 77;
@@ -256,7 +258,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(52, 345);
+            this.label6.Location = new System.Drawing.Point(52, 379);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 17);
             this.label6.TabIndex = 87;
@@ -279,7 +281,7 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(-3, 450);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(-3, 480);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(595, 21);
             this.bunifuSeparator1.TabIndex = 85;
@@ -397,12 +399,33 @@
             this.label9.TabIndex = 95;
             this.label9.Text = "Juzgado/Fiscalía:";
             // 
+            // cmbRango
+            // 
+            this.cmbRango.FormattingEnabled = true;
+            this.cmbRango.Location = new System.Drawing.Point(272, 341);
+            this.cmbRango.Name = "cmbRango";
+            this.cmbRango.Size = new System.Drawing.Size(227, 21);
+            this.cmbRango.TabIndex = 98;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(52, 345);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 17);
+            this.label12.TabIndex = 99;
+            this.label12.Text = "Rango:";
+            // 
             // FormEditarExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(67)))), ((int)(((byte)(129)))));
-            this.ClientSize = new System.Drawing.Size(592, 516);
+            this.ClientSize = new System.Drawing.Size(592, 547);
+            this.Controls.Add(this.cmbRango);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.cmbEstadoCaso);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.cmbJuzgadoFiscalia);
@@ -431,6 +454,7 @@
             this.Controls.Add(this.txtCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormEditarExpediente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditarExpediente";
             this.Load += new System.EventHandler(this.FormEditarExpediente_Load);
             this.panel1.ResumeLayout(false);
@@ -475,5 +499,7 @@
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.ComboBox cmbEstadoCaso;
         public System.Windows.Forms.ComboBox cmbJuzgadoFiscalia;
+        public System.Windows.Forms.ComboBox cmbRango;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -69,5 +69,18 @@ namespace ProyectCasos
             return Tabla;
         }
 
+        public DataTable ListarComboRango()
+        {
+            DataTable Tabla = new DataTable();
+            com.Connection = con.AbrirConeccion();
+            com.CommandText = "SP_ListarRango";
+            com.CommandType = CommandType.StoredProcedure;
+            LeerFilas = com.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            LeerFilas.Close();
+            com.Connection = con.CerrarConeccion();
+            return Tabla;
+        }
+
     }
 }

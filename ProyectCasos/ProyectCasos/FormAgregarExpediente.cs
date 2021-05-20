@@ -69,6 +69,14 @@ namespace ProyectCasos
             cmbEstadoCaso.ValueMember = "Id_Estado";
         }
 
+        private void ListarRango()
+        {
+            ListadosCombobox LCombo = new ListadosCombobox();
+            cmbRango.DataSource = LCombo.ListarComboRango();
+            cmbRango.DisplayMember = "Nombre_Rango";
+            cmbRango.ValueMember = "Id_Rango";
+        }
+
         public void btnGuardar_Click(object sender, EventArgs e)
         {
             Form1 Fr = new Form1();
@@ -90,7 +98,7 @@ namespace ProyectCasos
                
 
                 cn.AbrirConeccion();
-                SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
+                SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
                 com.ExecuteNonQuery();
                 Fr.CargarDatosDataGridView();
                 MessageBox.Show("Datos Guardados Con Exito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -128,6 +136,7 @@ namespace ProyectCasos
             ListarDireccionAsignada();
             ListarJuzgadoFiscalia();
             ListarEstado();
+            ListarRango();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
