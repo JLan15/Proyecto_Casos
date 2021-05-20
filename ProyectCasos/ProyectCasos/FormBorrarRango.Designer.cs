@@ -1,6 +1,6 @@
 ﻿namespace ProyectCasos
 {
-    partial class FormEditarEstadoCasos
+    partial class FormBorrarRango
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarEstadoCasos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBorrarRango));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.txtNombreEstadoCasos = new System.Windows.Forms.TextBox();
-            this.btnEditar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnEliminar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrar = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtIdEstado = new System.Windows.Forms.TextBox();
+            this.txtIdRango = new System.Windows.Forms.TextBox();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,38 +50,31 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // txtNombreEstadoCasos
+            // btnEliminar
             // 
-            this.txtNombreEstadoCasos.Location = new System.Drawing.Point(272, 109);
-            this.txtNombreEstadoCasos.Name = "txtNombreEstadoCasos";
-            this.txtNombreEstadoCasos.Size = new System.Drawing.Size(283, 20);
-            this.txtNombreEstadoCasos.TabIndex = 133;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.ActiveBorderThickness = 1;
-            this.btnEditar.ActiveCornerRadius = 20;
-            this.btnEditar.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnEditar.ActiveForecolor = System.Drawing.Color.Black;
-            this.btnEditar.ActiveLineColor = System.Drawing.Color.Black;
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(67)))), ((int)(((byte)(129)))));
-            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
-            this.btnEditar.ButtonText = "Editar";
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnEditar.IdleBorderThickness = 1;
-            this.btnEditar.IdleCornerRadius = 20;
-            this.btnEditar.IdleFillColor = System.Drawing.Color.LimeGreen;
-            this.btnEditar.IdleForecolor = System.Drawing.Color.White;
-            this.btnEditar.IdleLineColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(211, 197);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(181, 41);
-            this.btnEditar.TabIndex = 128;
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnEliminar.ActiveBorderThickness = 1;
+            this.btnEliminar.ActiveCornerRadius = 20;
+            this.btnEliminar.ActiveFillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnEliminar.ActiveForecolor = System.Drawing.Color.Black;
+            this.btnEliminar.ActiveLineColor = System.Drawing.Color.Black;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(67)))), ((int)(((byte)(129)))));
+            this.btnEliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminar.BackgroundImage")));
+            this.btnEliminar.ButtonText = "Eliminar";
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminar.IdleBorderThickness = 1;
+            this.btnEliminar.IdleCornerRadius = 20;
+            this.btnEliminar.IdleFillColor = System.Drawing.Color.LimeGreen;
+            this.btnEliminar.IdleForecolor = System.Drawing.Color.White;
+            this.btnEliminar.IdleLineColor = System.Drawing.Color.Black;
+            this.btnEliminar.Location = new System.Drawing.Point(96, 144);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(163, 41);
+            this.btnEliminar.TabIndex = 137;
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panel1
             // 
@@ -95,8 +86,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(588, 43);
-            this.panel1.TabIndex = 132;
+            this.panel1.Size = new System.Drawing.Size(341, 43);
+            this.panel1.TabIndex = 136;
             // 
             // btnCerrar
             // 
@@ -104,7 +95,7 @@
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(548, 2);
+            this.btnCerrar.Location = new System.Drawing.Point(301, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(40, 34);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -130,7 +121,7 @@
             this.bunifuSeparator2.LineThickness = 1;
             this.bunifuSeparator2.Location = new System.Drawing.Point(0, 33);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(592, 10);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(339, 10);
             this.bunifuSeparator2.TabIndex = 72;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
@@ -143,72 +134,59 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(46, 9);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(194, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(131, 20);
             this.bunifuCustomLabel1.TabIndex = 3;
-            this.bunifuCustomLabel1.Text = "Editar Estado del Caso";
+            this.bunifuCustomLabel1.Text = "Eliminar Rango";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(52, 80);
+            this.label11.Location = new System.Drawing.Point(119, 78);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 17);
-            this.label11.TabIndex = 131;
+            this.label11.TabIndex = 135;
             this.label11.Text = "ID:";
             // 
-            // txtIdEstado
+            // txtIdRango
             // 
-            this.txtIdEstado.BackColor = System.Drawing.Color.White;
-            this.txtIdEstado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdEstado.Location = new System.Drawing.Point(272, 77);
-            this.txtIdEstado.Name = "txtIdEstado";
-            this.txtIdEstado.Size = new System.Drawing.Size(29, 20);
-            this.txtIdEstado.TabIndex = 127;
-            this.txtIdEstado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIdRango.BackColor = System.Drawing.Color.White;
+            this.txtIdRango.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdRango.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdRango.Location = new System.Drawing.Point(157, 78);
+            this.txtIdRango.Name = "txtIdRango";
+            this.txtIdRango.Size = new System.Drawing.Size(60, 20);
+            this.txtIdRango.TabIndex = 133;
+            this.txtIdRango.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(-3, 176);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(-1, 115);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(595, 21);
-            this.bunifuSeparator1.TabIndex = 130;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(341, 21);
+            this.bunifuSeparator1.TabIndex = 134;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(52, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 17);
-            this.label1.TabIndex = 129;
-            this.label1.Text = "Estado del Caso:";
-            // 
-            // FormEditarEstadoCasos
+            // FormBorrarRango
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(67)))), ((int)(((byte)(129)))));
-            this.ClientSize = new System.Drawing.Size(588, 241);
-            this.Controls.Add(this.txtNombreEstadoCasos);
-            this.Controls.Add(this.btnEditar);
+            this.ClientSize = new System.Drawing.Size(341, 189);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtIdEstado);
+            this.Controls.Add(this.txtIdRango);
             this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormEditarEstadoCasos";
+            this.Name = "FormBorrarRango";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormEditarEstadoCasos";
+            this.Text = "FormBorrarRango";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -221,16 +199,14 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        public System.Windows.Forms.TextBox txtNombreEstadoCasos;
-        public Bunifu.Framework.UI.BunifuThinButton2 btnEditar;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnEliminar;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuImageButton btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         public System.Windows.Forms.Label label11;
-        public System.Windows.Forms.TextBox txtIdEstado;
+        public System.Windows.Forms.TextBox txtIdRango;
         public Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        public System.Windows.Forms.Label label1;
     }
 }

@@ -87,6 +87,12 @@
     <Compile Include="FormAgregarJuzgadoFiscalia.Designer.cs">
       <DependentUpon>FormAgregarJuzgadoFiscalia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAgregarRango.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarRango.Designer.cs">
+      <DependentUpon>FormAgregarRango.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBorrarCondicionJuridica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     <Compile Include="FormBorrarJuzgadoFiscalia.Designer.cs">
       <DependentUpon>FormBorrarJuzgadoFiscalia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBorrarRango.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBorrarRango.Designer.cs">
+      <DependentUpon>FormBorrarRango.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditarCondicionJuridica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,12 @@
     </Compile>
     <Compile Include="FormEditarJuzgadoFiscalia.Designer.cs">
       <DependentUpon>FormEditarJuzgadoFiscalia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarRango.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarRango.Designer.cs">
+      <DependentUpon>FormEditarRango.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -183,6 +201,12 @@
     <Compile Include="FormVerJuzgadoFiscalia.Designer.cs">
       <DependentUpon>FormVerJuzgadoFiscalia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVerRango.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerRango.Designer.cs">
+      <DependentUpon>FormVerRango.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadosCombobox.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -202,6 +226,9 @@
     <EmbeddedResource Include="FormAgregarJuzgadoFiscalia.resx">
       <DependentUpon>FormAgregarJuzgadoFiscalia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarRango.resx">
+      <DependentUpon>FormAgregarRango.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBorrarCondicionJuridica.resx">
       <DependentUpon>FormBorrarCondicionJuridica.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +244,9 @@
     <EmbeddedResource Include="FormBorrarJuzgadoFiscalia.resx">
       <DependentUpon>FormBorrarJuzgadoFiscalia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBorrarRango.resx">
+      <DependentUpon>FormBorrarRango.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditarCondicionJuridica.resx">
       <DependentUpon>FormEditarCondicionJuridica.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarJuzgadoFiscalia.resx">
       <DependentUpon>FormEditarJuzgadoFiscalia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarRango.resx">
+      <DependentUpon>FormEditarRango.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuPrincipal.resx">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
@@ -249,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVerJuzgadoFiscalia.resx">
       <DependentUpon>FormVerJuzgadoFiscalia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVerRango.resx">
+      <DependentUpon>FormVerRango.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
