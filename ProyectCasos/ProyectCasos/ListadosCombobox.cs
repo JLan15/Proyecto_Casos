@@ -41,11 +41,7 @@ namespace ProyectCasos
             com.Connection = con.CerrarConeccion();
             return Tabla;
         }
-<<<<<<< HEAD
-<<<<<<< 0bafd4ca5d326d066c0c3617ad7a17e1c4990a71
-=======
-=======
->>>>>>> main
+
 
         public DataTable ListarComboJuzgadoFiscalia()
         {
@@ -59,7 +55,6 @@ namespace ProyectCasos
             com.Connection = con.CerrarConeccion();
             return Tabla;
         }
-<<<<<<< HEAD
 
         public DataTable ListarComboEstadoCasos()
         {
@@ -73,8 +68,6 @@ namespace ProyectCasos
             com.Connection = con.CerrarConeccion();
             return Tabla;
         }
->>>>>>> Corrección a Exportacion de Excel en Modulo Expedientes
-=======
->>>>>>> main
+
     }
 }

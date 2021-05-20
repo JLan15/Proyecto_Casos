@@ -191,7 +191,7 @@
             this.label8.Size = new System.Drawing.Size(49, 17);
             this.label8.TabIndex = 66;
             this.label8.Text = "Caso:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+           
             // 
             // dtpFechaHechos
             // 
