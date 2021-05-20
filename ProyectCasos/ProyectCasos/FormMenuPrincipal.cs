@@ -101,7 +101,7 @@ namespace ProyectCasos
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Estas Seguro de Cerrar el Programa?","Alerta", MessageBoxButtons.YesNo)== DialogResult.Yes);
+            if (MessageBox.Show("Estas Seguro de Cerrar el Programa?","Alerta", MessageBoxButtons.YesNo) == DialogResult.Yes);
             Application.Exit();
         }
 
@@ -126,6 +126,11 @@ namespace ProyectCasos
         private void bunifuFlatButton5_Click(object sender, EventArgs e)
         {
             AbrirFormularios<FormVerJuzgadoFiscalia>();
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<FormVerEstadoCasos>();
         }
 
         private void btnExpedientes_Click(object sender, EventArgs e)

@@ -63,6 +63,12 @@
     <Compile Include="FormAgregarDireccionAsignada.Designer.cs">
       <DependentUpon>FormAgregarDireccionAsignada.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAgregarEstadoCasos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarEstadoCasos.Designer.cs">
+      <DependentUpon>FormAgregarEstadoCasos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAgregarExpediente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     <Compile Include="FormBorrarDireccionAsignada.Designer.cs">
       <DependentUpon>FormBorrarDireccionAsignada.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBorrarEstadoCasos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBorrarEstadoCasos.Designer.cs">
+      <DependentUpon>FormBorrarEstadoCasos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBorrarExpediente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,12 @@
     <Compile Include="FormEditarDireccionAsignada.Designer.cs">
       <DependentUpon>FormEditarDireccionAsignada.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditarEstadoCasos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarEstadoCasos.Designer.cs">
+      <DependentUpon>FormEditarEstadoCasos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditarExpediente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +152,12 @@
     </Compile>
     <Compile Include="FormMenuPrincipal.Designer.cs">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVerEstadoCasos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerEstadoCasos.Designer.cs">
+      <DependentUpon>FormVerEstadoCasos.cs</DependentUpon>
     </Compile>
     <Compile Include="FormVerExpediente.cs">
       <SubType>Form</SubType>
@@ -166,6 +190,9 @@
     <EmbeddedResource Include="FormAgregarDireccionAsignada.resx">
       <DependentUpon>FormAgregarDireccionAsignada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarEstadoCasos.resx">
+      <DependentUpon>FormAgregarEstadoCasos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarExpediente.resx">
       <DependentUpon>FormAgregarExpediente.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +208,9 @@
     <EmbeddedResource Include="FormBorrarDireccionAsignada.resx">
       <DependentUpon>FormBorrarDireccionAsignada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBorrarEstadoCasos.resx">
+      <DependentUpon>FormBorrarEstadoCasos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBorrarExpediente.resx">
       <DependentUpon>FormBorrarExpediente.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +223,9 @@
     <EmbeddedResource Include="FormEditarDireccionAsignada.resx">
       <DependentUpon>FormEditarDireccionAsignada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarEstadoCasos.resx">
+      <DependentUpon>FormEditarEstadoCasos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditarExpediente.resx">
       <DependentUpon>FormEditarExpediente.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuPrincipal.resx">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVerEstadoCasos.resx">
+      <DependentUpon>FormVerEstadoCasos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVerExpediente.resx">
       <DependentUpon>FormVerExpediente.cs</DependentUpon>
