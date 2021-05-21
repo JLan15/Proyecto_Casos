@@ -63,6 +63,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cmbRango = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.cmbSegundaCondicion = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,7 +93,7 @@
             this.btnEditar.IdleFillColor = System.Drawing.Color.LimeGreen;
             this.btnEditar.IdleForecolor = System.Drawing.Color.White;
             this.btnEditar.IdleLineColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(224, 500);
+            this.btnEditar.Location = new System.Drawing.Point(224, 516);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(181, 41);
@@ -188,7 +190,7 @@
             this.rdbInactivo.AutoSize = true;
             this.rdbInactivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbInactivo.ForeColor = System.Drawing.Color.White;
-            this.rdbInactivo.Location = new System.Drawing.Point(372, 446);
+            this.rdbInactivo.Location = new System.Drawing.Point(372, 478);
             this.rdbInactivo.Name = "rdbInactivo";
             this.rdbInactivo.Size = new System.Drawing.Size(71, 17);
             this.rdbInactivo.TabIndex = 80;
@@ -201,7 +203,7 @@
             this.rdbActivo.AutoSize = true;
             this.rdbActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbActivo.ForeColor = System.Drawing.Color.White;
-            this.rdbActivo.Location = new System.Drawing.Point(271, 446);
+            this.rdbActivo.Location = new System.Drawing.Point(271, 478);
             this.rdbActivo.Name = "rdbActivo";
             this.rdbActivo.Size = new System.Drawing.Size(61, 17);
             this.rdbActivo.TabIndex = 79;
@@ -214,7 +216,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(52, 446);
+            this.label8.Location = new System.Drawing.Point(52, 478);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 17);
             this.label8.TabIndex = 89;
@@ -222,7 +224,7 @@
             // 
             // dtpFechaHechos
             // 
-            this.dtpFechaHechos.Location = new System.Drawing.Point(271, 410);
+            this.dtpFechaHechos.Location = new System.Drawing.Point(271, 442);
             this.dtpFechaHechos.Name = "dtpFechaHechos";
             this.dtpFechaHechos.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaHechos.TabIndex = 78;
@@ -232,7 +234,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(52, 413);
+            this.label7.Location = new System.Drawing.Point(52, 445);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(139, 17);
             this.label7.TabIndex = 88;
@@ -240,7 +242,7 @@
             // 
             // txtLugarHechos
             // 
-            this.txtLugarHechos.Location = new System.Drawing.Point(271, 374);
+            this.txtLugarHechos.Location = new System.Drawing.Point(271, 406);
             this.txtLugarHechos.Name = "txtLugarHechos";
             this.txtLugarHechos.Size = new System.Drawing.Size(333, 20);
             this.txtLugarHechos.TabIndex = 77;
@@ -248,20 +250,21 @@
             // cmbCondicionJuridica
             // 
             this.cmbCondicionJuridica.BackColor = System.Drawing.Color.White;
-            this.cmbCondicionJuridica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCondicionJuridica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCondicionJuridica.FormattingEnabled = true;
             this.cmbCondicionJuridica.Location = new System.Drawing.Point(272, 201);
             this.cmbCondicionJuridica.Name = "cmbCondicionJuridica";
             this.cmbCondicionJuridica.Size = new System.Drawing.Size(227, 21);
             this.cmbCondicionJuridica.TabIndex = 76;
+            this.cmbCondicionJuridica.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCondicionJuridica_KeyPress);
+            this.cmbCondicionJuridica.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbCondicionJuridica_MouseClick);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(52, 377);
+            this.label6.Location = new System.Drawing.Point(52, 409);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 17);
             this.label6.TabIndex = 87;
@@ -284,7 +287,7 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(-3, 480);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(-3, 496);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Size = new System.Drawing.Size(631, 21);
             this.bunifuSeparator1.TabIndex = 85;
@@ -347,12 +350,13 @@
             // 
             // cmbDireccionAsignada
             // 
-            this.cmbDireccionAsignada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDireccionAsignada.FormattingEnabled = true;
             this.cmbDireccionAsignada.Location = new System.Drawing.Point(272, 236);
             this.cmbDireccionAsignada.Name = "cmbDireccionAsignada";
             this.cmbDireccionAsignada.Size = new System.Drawing.Size(227, 21);
             this.cmbDireccionAsignada.TabIndex = 92;
+            this.cmbDireccionAsignada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDireccionAsignada_KeyPress);
+            this.cmbDireccionAsignada.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbDireccionAsignada_MouseClick);
             // 
             // label4
             // 
@@ -367,12 +371,13 @@
             // 
             // cmbEstadoCaso
             // 
-            this.cmbEstadoCaso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoCaso.FormattingEnabled = true;
             this.cmbEstadoCaso.Location = new System.Drawing.Point(272, 305);
             this.cmbEstadoCaso.Name = "cmbEstadoCaso";
             this.cmbEstadoCaso.Size = new System.Drawing.Size(227, 21);
             this.cmbEstadoCaso.TabIndex = 96;
+            this.cmbEstadoCaso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbEstadoCaso_KeyPress);
+            this.cmbEstadoCaso.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbEstadoCaso_MouseClick);
             // 
             // label10
             // 
@@ -387,12 +392,13 @@
             // 
             // cmbJuzgadoFiscalia
             // 
-            this.cmbJuzgadoFiscalia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbJuzgadoFiscalia.FormattingEnabled = true;
             this.cmbJuzgadoFiscalia.Location = new System.Drawing.Point(272, 270);
             this.cmbJuzgadoFiscalia.Name = "cmbJuzgadoFiscalia";
             this.cmbJuzgadoFiscalia.Size = new System.Drawing.Size(332, 21);
             this.cmbJuzgadoFiscalia.TabIndex = 94;
+            this.cmbJuzgadoFiscalia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbJuzgadoFiscalia_KeyPress);
+            this.cmbJuzgadoFiscalia.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbJuzgadoFiscalia_MouseClick);
             // 
             // label9
             // 
@@ -407,12 +413,13 @@
             // 
             // cmbRango
             // 
-            this.cmbRango.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRango.FormattingEnabled = true;
             this.cmbRango.Location = new System.Drawing.Point(272, 339);
             this.cmbRango.Name = "cmbRango";
             this.cmbRango.Size = new System.Drawing.Size(227, 21);
             this.cmbRango.TabIndex = 98;
+            this.cmbRango.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbRango_KeyPress);
+            this.cmbRango.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbRango_MouseClick);
             // 
             // label12
             // 
@@ -425,12 +432,38 @@
             this.label12.TabIndex = 99;
             this.label12.Text = "Rango:";
             // 
+            // cmbSegundaCondicion
+            // 
+            this.cmbSegundaCondicion.BackColor = System.Drawing.Color.White;
+            this.cmbSegundaCondicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSegundaCondicion.FormattingEnabled = true;
+            this.cmbSegundaCondicion.Location = new System.Drawing.Point(272, 373);
+            this.cmbSegundaCondicion.Name = "cmbSegundaCondicion";
+            this.cmbSegundaCondicion.Size = new System.Drawing.Size(227, 21);
+            this.cmbSegundaCondicion.TabIndex = 100;
+            this.cmbSegundaCondicion.Click += new System.EventHandler(this.cmbSegundaCondicion_Click);
+            this.cmbSegundaCondicion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbSegundaCondicion_KeyPress);
+            this.cmbSegundaCondicion.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbSegundaCondicion_MouseClick);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(52, 377);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(125, 17);
+            this.label13.TabIndex = 101;
+            this.label13.Text = "En Perjuicio De:";
+            // 
             // FormEditarExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(67)))), ((int)(((byte)(129)))));
-            this.ClientSize = new System.Drawing.Size(628, 547);
+            this.ClientSize = new System.Drawing.Size(628, 562);
+            this.Controls.Add(this.cmbSegundaCondicion);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.cmbRango);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cmbEstadoCaso);
@@ -508,5 +541,7 @@
         public System.Windows.Forms.ComboBox cmbJuzgadoFiscalia;
         public System.Windows.Forms.ComboBox cmbRango;
         private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.ComboBox cmbSegundaCondicion;
+        public System.Windows.Forms.Label label13;
     }
 }

@@ -77,6 +77,14 @@ namespace ProyectCasos
             cmbRango.ValueMember = "Id_Rango";
         }
 
+        private void ListarSegundaCondicionJuridica()
+        {
+            ListadosCombobox LCombo = new ListadosCombobox();
+            cmbSegundaCondicion.DataSource = LCombo.ListarComboCondicionJuridica();
+            cmbSegundaCondicion.DisplayMember = "Nombre_Condicion";
+            cmbSegundaCondicion.ValueMember = "Id_Condicion";
+        }
+
         public void btnGuardar_Click(object sender, EventArgs e)
         {
             Form1 Fr = new Form1();
@@ -98,7 +106,7 @@ namespace ProyectCasos
                
 
                 cn.AbrirConeccion();
-                SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
+                SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + +Convert.ToInt32(cmbSegundaCondicion.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
                 com.ExecuteNonQuery();
                 Fr.CargarDatosDataGridView();
                 MessageBox.Show("Datos Guardados Con Exito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -137,6 +145,7 @@ namespace ProyectCasos
             ListarJuzgadoFiscalia();
             ListarEstado();
             ListarRango();
+            ListarSegundaCondicionJuridica();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
