@@ -90,6 +90,12 @@ namespace ProyectCasos
         {
             CargarDatosDataGridViewDelito();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            FormBorrarDelito FrmBorrar = new FormBorrarDelito();
+            FrmBorrar.Show();
+        }
     }
     
 }

@@ -307,10 +307,11 @@ namespace ProyectCasos
             FrmEditar.cmbEstadoCaso.Text = dtgCrearExpediente.CurrentRow.Cells[7].Value.ToString();
             FrmEditar.cmbRango.Text = dtgCrearExpediente.CurrentRow.Cells[8].Value.ToString();
             FrmEditar.cmbSegundaCondicion.Text = dtgCrearExpediente.CurrentRow.Cells[9].Value.ToString();
-            FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[10].Value.ToString();
-            FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[11].Value.ToString();
+            FrmEditar.cmbDelito.Text = dtgCrearExpediente.CurrentRow.Cells[10].Value.ToString();
+            FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[11].Value.ToString();
+            FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[12].Value.ToString();
             //FechaHechos = dtgCrearExpediente.CurrentRow.Cells[9].Value.ToString();
-            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[12].Value.ToString();
+            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[13].Value.ToString();
 
             if (VariablesGlobales.status == "Activo")
             {

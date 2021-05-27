@@ -22,6 +22,31 @@ namespace ProyectCasos
             ListarEstado();
             ListarRango();
             ListarSegundaCondicionJuridica();
+
+            Conexion con = new Conexion();
+            SqlCommand com = new SqlCommand();
+            SqlDataReader LeerFilas;
+
+            DataTable Tabla = new DataTable();
+            com.Connection = con.AbrirConeccion();
+            com.CommandText = "SP_ListarDelito";
+            com.CommandType = CommandType.StoredProcedure;
+            LeerFilas = com.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            cmbDelito.DataSource = Tabla;
+            cmbDelito.DisplayMember = "Nombre_Delito";
+            cmbDelito.ValueMember = "Id_Delito";
+
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            foreach (DataRow row in Tabla.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["Nombre_Delito"]));
+            }
+            cmbDelito.AutoCompleteCustomSource = coleccion;
+            cmbDelito.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbDelito.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //LeerFilas.Close();
+            com.Connection = con.CerrarConeccion();
         }
        
         private void btnSalir_Click(object sender, EventArgs e)
@@ -120,7 +145,7 @@ namespace ProyectCasos
                     }
                     
                     cn.AbrirConeccion();
-                    SqlCommand com = new SqlCommand("exec dbo.SP_ActualizarExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + +Convert.ToInt32(cmbSegundaCondicion.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
+                    SqlCommand com = new SqlCommand("exec dbo.SP_ActualizarExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + +Convert.ToInt32(cmbSegundaCondicion.SelectedValue) + "', '" + Convert.ToInt32(cmbDelito.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
                     com.ExecuteNonQuery();
                     //cn.Close();
                     MessageBox.Show("Datos Actualizados Con Exito", "Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -257,7 +282,6 @@ namespace ProyectCasos
 
         private void btnEditar_MouseClick(object sender, MouseEventArgs e)
         {
-            VariablesGlobales.btneditarpresionado = true;
                 
         }
     }
