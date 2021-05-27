@@ -9,6 +9,7 @@ namespace ProyectCasos
     public class VariablesGlobales
     {
         public static string status = "";
+        public static bool btneditarpresionado = true;
         //public static int IdExp;
     }
 }

@@ -65,6 +65,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.cmbSegundaCondicion = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.labelCondicion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -93,13 +94,14 @@
             this.btnEditar.IdleFillColor = System.Drawing.Color.LimeGreen;
             this.btnEditar.IdleForecolor = System.Drawing.Color.White;
             this.btnEditar.IdleLineColor = System.Drawing.Color.Black;
-            this.btnEditar.Location = new System.Drawing.Point(224, 516);
+            this.btnEditar.Location = new System.Drawing.Point(246, 516);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(181, 41);
             this.btnEditar.TabIndex = 81;
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnEditar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnEditar_MouseClick);
             // 
             // panel1
             // 
@@ -111,7 +113,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(628, 43);
+            this.panel1.Size = new System.Drawing.Size(672, 43);
             this.panel1.TabIndex = 91;
             // 
             // btnCerrar
@@ -120,7 +122,7 @@
             this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageActive = null;
-            this.btnCerrar.Location = new System.Drawing.Point(588, 2);
+            this.btnCerrar.Location = new System.Drawing.Point(632, 2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(40, 34);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -146,7 +148,7 @@
             this.bunifuSeparator2.LineThickness = 1;
             this.bunifuSeparator2.Location = new System.Drawing.Point(0, 33);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(627, 10);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(671, 10);
             this.bunifuSeparator2.TabIndex = 72;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
@@ -250,12 +252,14 @@
             // cmbCondicionJuridica
             // 
             this.cmbCondicionJuridica.BackColor = System.Drawing.Color.White;
+            this.cmbCondicionJuridica.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCondicionJuridica.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCondicionJuridica.FormattingEnabled = true;
             this.cmbCondicionJuridica.Location = new System.Drawing.Point(272, 201);
             this.cmbCondicionJuridica.Name = "cmbCondicionJuridica";
             this.cmbCondicionJuridica.Size = new System.Drawing.Size(227, 21);
             this.cmbCondicionJuridica.TabIndex = 76;
+            this.cmbCondicionJuridica.SelectedIndexChanged += new System.EventHandler(this.cmbCondicionJuridica_SelectedIndexChanged);
             this.cmbCondicionJuridica.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbCondicionJuridica_KeyPress);
             this.cmbCondicionJuridica.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cmbCondicionJuridica_MouseClick);
             // 
@@ -289,7 +293,7 @@
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(-3, 496);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(631, 21);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(675, 21);
             this.bunifuSeparator1.TabIndex = 85;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
@@ -350,6 +354,7 @@
             // 
             // cmbDireccionAsignada
             // 
+            this.cmbDireccionAsignada.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDireccionAsignada.FormattingEnabled = true;
             this.cmbDireccionAsignada.Location = new System.Drawing.Point(272, 236);
             this.cmbDireccionAsignada.Name = "cmbDireccionAsignada";
@@ -371,6 +376,7 @@
             // 
             // cmbEstadoCaso
             // 
+            this.cmbEstadoCaso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoCaso.FormattingEnabled = true;
             this.cmbEstadoCaso.Location = new System.Drawing.Point(272, 305);
             this.cmbEstadoCaso.Name = "cmbEstadoCaso";
@@ -392,6 +398,7 @@
             // 
             // cmbJuzgadoFiscalia
             // 
+            this.cmbJuzgadoFiscalia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbJuzgadoFiscalia.FormattingEnabled = true;
             this.cmbJuzgadoFiscalia.Location = new System.Drawing.Point(272, 270);
             this.cmbJuzgadoFiscalia.Name = "cmbJuzgadoFiscalia";
@@ -413,6 +420,7 @@
             // 
             // cmbRango
             // 
+            this.cmbRango.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRango.FormattingEnabled = true;
             this.cmbRango.Location = new System.Drawing.Point(272, 339);
             this.cmbRango.Name = "cmbRango";
@@ -435,6 +443,7 @@
             // cmbSegundaCondicion
             // 
             this.cmbSegundaCondicion.BackColor = System.Drawing.Color.White;
+            this.cmbSegundaCondicion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSegundaCondicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSegundaCondicion.FormattingEnabled = true;
             this.cmbSegundaCondicion.Location = new System.Drawing.Point(272, 373);
@@ -456,12 +465,22 @@
             this.label13.TabIndex = 101;
             this.label13.Text = "En Perjuicio De:";
             // 
+            // labelCondicion
+            // 
+            this.labelCondicion.AutoSize = true;
+            this.labelCondicion.ForeColor = System.Drawing.Color.White;
+            this.labelCondicion.Location = new System.Drawing.Point(518, 209);
+            this.labelCondicion.Name = "labelCondicion";
+            this.labelCondicion.Size = new System.Drawing.Size(0, 13);
+            this.labelCondicion.TabIndex = 102;
+            // 
             // FormEditarExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(67)))), ((int)(((byte)(129)))));
-            this.ClientSize = new System.Drawing.Size(628, 562);
+            this.ClientSize = new System.Drawing.Size(672, 562);
+            this.Controls.Add(this.labelCondicion);
             this.Controls.Add(this.cmbSegundaCondicion);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.cmbRango);
@@ -496,6 +515,7 @@
             this.Name = "FormEditarExpediente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditarExpediente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEditarExpediente_FormClosing);
             this.Load += new System.EventHandler(this.FormEditarExpediente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -543,5 +563,6 @@
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.ComboBox cmbSegundaCondicion;
         public System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label labelCondicion;
     }
 }

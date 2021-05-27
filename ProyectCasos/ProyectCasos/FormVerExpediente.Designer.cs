@@ -363,7 +363,7 @@
             this.PanelPrincipal.Controls.Add(this.bunifuSeparator3);
             this.PanelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PanelPrincipal.Name = "PanelPrincipal";
-            this.PanelPrincipal.Size = new System.Drawing.Size(945, 443);
+            this.PanelPrincipal.Size = new System.Drawing.Size(945, 429);
             this.PanelPrincipal.TabIndex = 54;
             this.PanelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelPrincipal_Paint);
             // 

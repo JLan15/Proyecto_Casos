@@ -76,6 +76,12 @@ namespace ProyectCasos
             }
             
             CargarDatosDataGridView();
+
+            FormEditarExpediente FrmEditar = new FormEditarExpediente();
+            if(VariablesGlobales.btneditarpresionado)
+            {
+                CargarDatosDataGridView();
+            }
         }
 
         private void btnNuevo_Click_1(object sender, EventArgs e)

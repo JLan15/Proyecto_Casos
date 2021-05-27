@@ -138,6 +138,11 @@ namespace ProyectCasos
             AbrirFormularios<FormVerRango>();
         }
 
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<FormVerDelito>();
+        }
+
         private void btnExpedientes_Click(object sender, EventArgs e)
         {
             AbrirFormularios<Form1>();

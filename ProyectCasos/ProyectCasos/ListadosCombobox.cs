@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProyectCasos
 {
@@ -39,7 +40,7 @@ namespace ProyectCasos
             Tabla.Load(LeerFilas);
             LeerFilas.Close();
             com.Connection = con.CerrarConeccion();
-            return Tabla;
+            return Tabla;    
         }
 
 

@@ -16,8 +16,14 @@ namespace ProyectCasos
         public FormEditarExpediente()
         {
             InitializeComponent();
+            ListarCondicionJuridica();
+            ListarDireccionAsignada();
+            ListarJuzgadoFiscalia();
+            ListarEstado();
+            ListarRango();
+            ListarSegundaCondicionJuridica();
         }
-
+       
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -78,7 +84,7 @@ namespace ProyectCasos
             cmbSegundaCondicion.DataSource = LCombo.ListarComboCondicionJuridica();
             cmbSegundaCondicion.DisplayMember = "Nombre_Condicion";
             cmbSegundaCondicion.ValueMember = "Id_Condicion";
-            cmbCondicionJuridica.SelectedValue.ToString();
+            
         }
         /*public void CargarDatosDataGridView()
         {
@@ -112,7 +118,7 @@ namespace ProyectCasos
                     {
                         VariablesGlobales.status = rdbInactivo.Text;
                     }
-
+                    
                     cn.AbrirConeccion();
                     SqlCommand com = new SqlCommand("exec dbo.SP_ActualizarExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + +Convert.ToInt32(cmbSegundaCondicion.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
                     com.ExecuteNonQuery();
@@ -122,6 +128,7 @@ namespace ProyectCasos
                     //CargarDatosDataGridView();
                     cn.CerrarConeccion();
                     this.Close();
+                   
                 }
                 else
                 {
@@ -132,6 +139,7 @@ namespace ProyectCasos
             {
                 MessageBox.Show(ex.Message);
             }
+            
         }
 
 
@@ -155,7 +163,6 @@ namespace ProyectCasos
             ListarEstado();
             ListarRango();
             ListarSegundaCondicionJuridica();*/
-
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -175,62 +182,83 @@ namespace ProyectCasos
 
         private void cmbRango_MouseClick(object sender, MouseEventArgs e)
         {
-            ListarRango();
+            //ListarRango();
         }
 
         private void cmbSegundaCondicion_MouseClick(object sender, MouseEventArgs e)
         {
-            ListarSegundaCondicionJuridica();
+            //ListarSegundaCondicionJuridica();
         }
 
         private void cmbSegundaCondicion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
+            //e.Handled = true;
         }
 
         private void cmbRango_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
+            //e.Handled = true;
         }
 
         private void cmbEstadoCaso_MouseClick(object sender, MouseEventArgs e)
         {
-            ListarEstado();
+            //ListarEstado();
         }
 
         private void cmbEstadoCaso_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
+            //e.Handled = true;
         }
 
         private void cmbJuzgadoFiscalia_MouseClick(object sender, MouseEventArgs e)
         {
-            ListarJuzgadoFiscalia();
+            //ListarJuzgadoFiscalia();
         }
 
         private void cmbJuzgadoFiscalia_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
+            //e.Handled = true;
         }
 
         private void cmbDireccionAsignada_MouseClick(object sender, MouseEventArgs e)
         {
-            ListarDireccionAsignada();
+            //ListarDireccionAsignada();
         }
 
         private void cmbDireccionAsignada_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
+            //e.Handled = true;
         }
 
         private void cmbCondicionJuridica_MouseClick(object sender, MouseEventArgs e)
         {
-            ListarCondicionJuridica();
+            //ListarCondicionJuridica();
         }
 
         private void cmbCondicionJuridica_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
+            //e.Handled = true;
+        }
+
+        private void FormEditarExpediente_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           
+        }
+
+        private void bunifuThinButton21_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void cmbCondicionJuridica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnEditar_MouseClick(object sender, MouseEventArgs e)
+        {
+            VariablesGlobales.btneditarpresionado = true;
+                
         }
     }
 }
