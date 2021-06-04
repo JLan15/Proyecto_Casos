@@ -106,7 +106,7 @@ namespace ProyectCasos
                
 
                 cn.AbrirConeccion();
-                SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + txtCodigo.Text + "' ,'" + txtNum.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "','" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + +Convert.ToInt32(cmbSegundaCondicion.SelectedValue) + "', '" + Convert.ToInt32(cmbDelito.SelectedValue) + "', '" + txtLugarHechos.Text + "', '" + DateTime.Parse(dtpFechaHechos.Text) + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
+                SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "' ,'" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "', '" + txtLugarHechos.Text + "','" + DateTime.Parse(dtpFechaHechos.Text) + "','" + Convert.ToInt32(cmbDelito.SelectedValue) + "', '" + Convert.ToInt32(cmbMedidas.SelectedItem) + "', '" + Convert.ToInt32(cmbReclucion.SelectedItem) + "', '" + Convert.ToInt32(cmbSegundaCondicion.SelectedValue) + "', '" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + txtNum.Text + "', '" + txtCodigo.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRecursoReposicion.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoApelacion.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoAmparo.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoHabeasCorpus.SelectedItem) + "', '" + txtOtro.Text + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
                 com.ExecuteNonQuery();
                 Fr.CargarDatosDataGridView();
                 MessageBox.Show("Datos Guardados Con Exito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -176,6 +176,41 @@ namespace ProyectCasos
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbMedidas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbReclucion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbEstadoCaso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbRecursoReposicion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbRecursoApelacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbRecursoAmparo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbRecursoHabeasCorpus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
