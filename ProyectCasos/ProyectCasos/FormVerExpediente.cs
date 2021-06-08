@@ -316,7 +316,8 @@ namespace ProyectCasos
             FrmEditar.cmbRecursoAmparo.Text = dtgCrearExpediente.CurrentRow.Cells[17].Value.ToString();
             FrmEditar.cmbRecursoHabeasCorpus.Text = dtgCrearExpediente.CurrentRow.Cells[18].Value.ToString();
             FrmEditar.txtOtro.Text = dtgCrearExpediente.CurrentRow.Cells[19].Value.ToString();
-            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[20].Value.ToString();
+            FrmEditar.rtxtObservaciones.Text = dtgCrearExpediente.CurrentRow.Cells[20].Value.ToString();
+            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[21].Value.ToString();
 
             if (VariablesGlobales.status == "Activo")
             {
