@@ -143,6 +143,11 @@ namespace ProyectCasos
             AbrirFormularios<FormVerDelito>();
         }
 
+        private void btnPerfiles_Click(object sender, EventArgs e)
+        {
+            AbrirFormularios<FormVerPerfil>();
+        }
+
         private void btnExpedientes_Click(object sender, EventArgs e)
         {
             AbrirFormularios<Form1>();

@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Desktop\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -93,6 +93,12 @@
     <Compile Include="FormAgregarJuzgadoFiscalia.Designer.cs">
       <DependentUpon>FormAgregarJuzgadoFiscalia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAgregarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarPerfil.Designer.cs">
+      <DependentUpon>FormAgregarPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAgregarRango.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     <Compile Include="FormBorrarJuzgadoFiscalia.Designer.cs">
       <DependentUpon>FormBorrarJuzgadoFiscalia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBorrarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBorrarPerfil.Designer.cs">
+      <DependentUpon>FormBorrarPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBorrarRango.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +188,12 @@
     </Compile>
     <Compile Include="FormEditarJuzgadoFiscalia.Designer.cs">
       <DependentUpon>FormEditarJuzgadoFiscalia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarPerfil.Designer.cs">
+      <DependentUpon>FormEditarPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditarRango.cs">
       <SubType>Form</SubType>
@@ -225,6 +243,12 @@
     <Compile Include="FormVerJuzgadoFiscalia.Designer.cs">
       <DependentUpon>FormVerJuzgadoFiscalia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVerPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVerPerfil.Designer.cs">
+      <DependentUpon>FormVerPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormVerRango.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +277,9 @@
     <EmbeddedResource Include="FormAgregarJuzgadoFiscalia.resx">
       <DependentUpon>FormAgregarJuzgadoFiscalia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarPerfil.resx">
+      <DependentUpon>FormAgregarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarRango.resx">
       <DependentUpon>FormAgregarRango.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +301,9 @@
     <EmbeddedResource Include="FormBorrarJuzgadoFiscalia.resx">
       <DependentUpon>FormBorrarJuzgadoFiscalia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBorrarPerfil.resx">
+      <DependentUpon>FormBorrarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBorrarRango.resx">
       <DependentUpon>FormBorrarRango.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarJuzgadoFiscalia.resx">
       <DependentUpon>FormEditarJuzgadoFiscalia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarPerfil.resx">
+      <DependentUpon>FormEditarPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarRango.resx">
       <DependentUpon>FormEditarRango.cs</DependentUpon>
@@ -318,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVerJuzgadoFiscalia.resx">
       <DependentUpon>FormVerJuzgadoFiscalia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVerPerfil.resx">
+      <DependentUpon>FormVerPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVerRango.resx">
       <DependentUpon>FormVerRango.cs</DependentUpon>

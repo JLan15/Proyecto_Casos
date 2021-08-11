@@ -1,6 +1,6 @@
 ﻿namespace ProyectCasos
 {
-    partial class FormVerDelito
+    partial class FormVerPerfil
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerDelito));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerPerfil));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnRefrescar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnNuevo = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.dtgCrearDelito = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -46,14 +45,15 @@
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.dtgCrearPerfil = new System.Windows.Forms.DataGridView();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgCrearDelito)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.PanelPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCrearPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -61,22 +61,10 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // bunifuSeparator1
+            // bunifuElipse2
             // 
-            this.bunifuSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(1016, 177);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(13, 367);
-            this.bunifuSeparator1.TabIndex = 91;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = true;
+            this.bunifuElipse2.ElipseRadius = 5;
+            this.bunifuElipse2.TargetControl = this;
             // 
             // btnRefrescar
             // 
@@ -101,9 +89,9 @@
             this.btnRefrescar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(217, 50);
-            this.btnRefrescar.TabIndex = 95;
+            this.btnRefrescar.TabIndex = 103;
             this.btnRefrescar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click_1);
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnNuevo
             // 
@@ -128,7 +116,7 @@
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(217, 50);
-            this.btnNuevo.TabIndex = 94;
+            this.btnNuevo.TabIndex = 102;
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -155,44 +143,9 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(217, 50);
-            this.btnEliminar.TabIndex = 93;
+            this.btnEliminar.TabIndex = 101;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // dtgCrearDelito
-            // 
-            this.dtgCrearDelito.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgCrearDelito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dtgCrearDelito.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtgCrearDelito.BackgroundColor = System.Drawing.Color.Navy;
-            this.dtgCrearDelito.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgCrearDelito.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(17)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgCrearDelito.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgCrearDelito.ColumnHeadersHeight = 21;
-            this.dtgCrearDelito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dtgCrearDelito.EnableHeadersVisualStyles = false;
-            this.dtgCrearDelito.GridColor = System.Drawing.Color.Black;
-            this.dtgCrearDelito.Location = new System.Drawing.Point(16, 181);
-            this.dtgCrearDelito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtgCrearDelito.Name = "dtgCrearDelito";
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgCrearDelito.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgCrearDelito.Size = new System.Drawing.Size(992, 345);
-            this.dtgCrearDelito.TabIndex = 90;
-            this.dtgCrearDelito.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgCrearDelito_CellContentClick);
-            this.dtgCrearDelito.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgCrearDelito_CellMouseClick);
             // 
             // panel1
             // 
@@ -202,17 +155,17 @@
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Location = new System.Drawing.Point(0, 50);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1260, 119);
-            this.panel1.TabIndex = 92;
+            this.panel1.TabIndex = 100;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(383, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(325, 117);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -226,7 +179,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(1121, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(137, 119);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -242,10 +195,10 @@
             this.panel2.Controls.Add(this.bunifuSeparator2);
             this.panel2.Controls.Add(this.bunifuCustomLabel1);
             this.panel2.Location = new System.Drawing.Point(0, -1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1260, 52);
-            this.panel2.TabIndex = 89;
+            this.panel2.TabIndex = 97;
             // 
             // btnCerrar
             // 
@@ -254,7 +207,7 @@
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.ImageActive = null;
             this.btnCerrar.Location = new System.Drawing.Point(1199, 2);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(53, 42);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -271,7 +224,7 @@
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
             this.bunifuSeparator2.LineThickness = 2;
             this.bunifuSeparator2.Location = new System.Drawing.Point(-9, 43);
-            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(1271, 12);
             this.bunifuSeparator2.TabIndex = 44;
@@ -289,21 +242,62 @@
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(16, 11);
             this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(78, 25);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(84, 25);
             this.bunifuCustomLabel1.TabIndex = 1;
-            this.bunifuCustomLabel1.Text = "Delitos";
+            this.bunifuCustomLabel1.Text = "Perfiles";
+            this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // PanelPrincipal
             // 
             this.PanelPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelPrincipal.Controls.Add(this.dtgCrearPerfil);
             this.PanelPrincipal.Controls.Add(this.bunifuSeparator3);
-            this.PanelPrincipal.Location = new System.Drawing.Point(16, -1);
-            this.PanelPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelPrincipal.Location = new System.Drawing.Point(0, -1);
+            this.PanelPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.PanelPrincipal.Name = "PanelPrincipal";
-            this.PanelPrincipal.Size = new System.Drawing.Size(1244, 527);
-            this.PanelPrincipal.TabIndex = 96;
+            this.PanelPrincipal.Size = new System.Drawing.Size(1262, 531);
+            this.PanelPrincipal.TabIndex = 104;
+            this.PanelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelPrincipal_Paint);
+            // 
+            // dtgCrearPerfil
+            // 
+            this.dtgCrearPerfil.AllowUserToAddRows = false;
+            this.dtgCrearPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgCrearPerfil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgCrearPerfil.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgCrearPerfil.BackgroundColor = System.Drawing.Color.Navy;
+            this.dtgCrearPerfil.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgCrearPerfil.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(17)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgCrearPerfil.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgCrearPerfil.ColumnHeadersHeight = 21;
+            this.dtgCrearPerfil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dtgCrearPerfil.EnableHeadersVisualStyles = false;
+            this.dtgCrearPerfil.GridColor = System.Drawing.Color.Black;
+            this.dtgCrearPerfil.Location = new System.Drawing.Point(4, 178);
+            this.dtgCrearPerfil.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgCrearPerfil.Name = "dtgCrearPerfil";
+            this.dtgCrearPerfil.ReadOnly = true;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgCrearPerfil.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgCrearPerfil.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgCrearPerfil.Size = new System.Drawing.Size(1015, 348);
+            this.dtgCrearPerfil.TabIndex = 46;
+            this.dtgCrearPerfil.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgCrearPerfil_CellMouseDoubleClick_1);
             // 
             // bunifuSeparator3
             // 
@@ -313,34 +307,30 @@
             this.bunifuSeparator3.ForeColor = System.Drawing.Color.SeaGreen;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
             this.bunifuSeparator3.LineThickness = 2;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(0, 169);
-            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(-45, 169);
+            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
-            this.bunifuSeparator3.Size = new System.Drawing.Size(1243, 12);
+            this.bunifuSeparator3.Size = new System.Drawing.Size(1305, 10);
             this.bunifuSeparator3.TabIndex = 45;
             this.bunifuSeparator3.Transparency = 255;
             this.bunifuSeparator3.Vertical = false;
             // 
-            // FormVerDelito
+            // FormVerPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(67)))), ((int)(((byte)(129)))));
             this.ClientSize = new System.Drawing.Size(1260, 543);
-            this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.dtgCrearDelito);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.PanelPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "FormVerDelito";
-            this.Text = "FormVerDelito";
-            this.Load += new System.EventHandler(this.FormVerDelito_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgCrearDelito)).EndInit();
+            this.Name = "FormVerPerfil";
+            this.Text = "FormVerPerfil";
+            this.Load += new System.EventHandler(this.FormVerPerfil_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -348,6 +338,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.PanelPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCrearPerfil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,11 +346,9 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private Bunifu.Framework.UI.BunifuThinButton2 btnRefrescar;
         private Bunifu.Framework.UI.BunifuThinButton2 btnNuevo;
         private Bunifu.Framework.UI.BunifuThinButton2 btnEliminar;
-        public System.Windows.Forms.DataGridView dtgCrearDelito;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -369,5 +358,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.Panel PanelPrincipal;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        public System.Windows.Forms.DataGridView dtgCrearPerfil;
     }
 }

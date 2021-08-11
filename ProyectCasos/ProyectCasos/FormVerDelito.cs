@@ -96,6 +96,11 @@ namespace ProyectCasos
             FormBorrarDelito FrmBorrar = new FormBorrarDelito();
             FrmBorrar.Show();
         }
+
+        private void dtgCrearDelito_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     
 }
