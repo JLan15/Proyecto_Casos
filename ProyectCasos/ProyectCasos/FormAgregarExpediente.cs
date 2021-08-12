@@ -18,6 +18,7 @@ namespace ProyectCasos
         {
             InitializeComponent();
         }
+        
 
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -85,6 +86,22 @@ namespace ProyectCasos
             cmbSegundaCondicion.ValueMember = "Id_Condicion";
         }
 
+        /*private void ListarPerfil()
+        {
+            ListadosCombobox LCombo = new ListadosCombobox();
+            cmbNombrePerfil.DataSource = LCombo.ListarComboPerfil();
+            cmbNombrePerfil.DisplayMember = "Nombre";
+            cmbNombrePerfil.ValueMember = "Id_Perfil";
+        }
+
+        private void ListarSegundoPerfil()
+        {
+            ListadosCombobox LCombo = new ListadosCombobox();
+            cmbNombreSegundoPerfil.DataSource = LCombo.ListarComboPerfil();
+            cmbNombreSegundoPerfil.DisplayMember = "Nombre";
+            cmbNombreSegundoPerfil.ValueMember = "Id_Perfil";
+        }*/
+
         public void btnGuardar_Click(object sender, EventArgs e)
         {
             Form1 Fr = new Form1();
@@ -106,7 +123,7 @@ namespace ProyectCasos
                
 
                 cn.AbrirConeccion();
-                SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "' ,'" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "', '" + txtLugarHechos.Text + "','" + DateTime.Parse(dtpFechaHechos.Text) + "','" + Convert.ToInt32(cmbDelito.SelectedValue) + "', '" + Convert.ToInt32(cmbMedidas.SelectedItem) + "', '" + Convert.ToInt32(cmbReclucion.SelectedItem) + "', '" + Convert.ToInt32(cmbSegundaCondicion.SelectedValue) + "', '" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + txtNum.Text + "', '" + txtCodigo.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRecursoReposicion.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoApelacion.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoAmparo.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoHabeasCorpus.SelectedItem) + "', '" + txtOtro.Text + "', '" + txtObservaciones.Text + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
+                SqlCommand com = new SqlCommand("exec dbo.SP_CrearExpediente '" + int.Parse(txtIdExp.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "' , '" + Convert.ToInt32(cmbNombrePerfil.SelectedValue) + "','" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "', '" + txtLugarHechos.Text + "','" + DateTime.Parse(dtpFechaHechos.Text) + "','" + Convert.ToInt32(cmbDelito.SelectedValue) + "', '" + Convert.ToInt32(cmbMedidas.SelectedItem) + "', '" + Convert.ToInt32(cmbReclucion.SelectedItem) + "', '" + Convert.ToInt32(cmbSegundaCondicion.SelectedValue) + "', '" + Convert.ToInt32(cmbNombreSegundoPerfil.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + txtNum.Text + "', '" + txtCodigo.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRecursoReposicion.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoApelacion.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoAmparo.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoHabeasCorpus.SelectedItem) + "', '" + txtOtro.Text + "', '" + txtObservaciones.Text + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
                 com.ExecuteNonQuery();
                 Fr.CargarDatosDataGridView();
                 MessageBox.Show("Datos Guardados Con Exito", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -136,6 +153,86 @@ namespace ProyectCasos
             //dtgCrearExpediente.DataSource = dt;
         }
 
+        public void LitarDelito()
+        {
+            Conexion con = new Conexion();
+            SqlCommand com = new SqlCommand();
+            SqlDataReader LeerFilas;
+            DataTable Tabla = new DataTable();
+            com.Connection = con.AbrirConeccion();
+            com.CommandText = "SP_ListarDelito";
+            com.CommandType = CommandType.StoredProcedure;
+            LeerFilas = com.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            cmbDelito.DataSource = Tabla;
+            cmbDelito.DisplayMember = "Nombre_Delito";
+            cmbDelito.ValueMember = "Id_Delito";
+
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            foreach (DataRow row in Tabla.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["Nombre_Delito"]));
+            }
+            cmbDelito.AutoCompleteCustomSource = coleccion;
+            cmbDelito.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbDelito.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //LeerFilas.Close();
+            com.Connection = con.CerrarConeccion();
+        }
+
+        public void LitarPerfil()
+        {
+            Conexion con = new Conexion();
+            SqlCommand com = new SqlCommand();
+            SqlDataReader LeerFilas;
+            DataTable Tabla = new DataTable();
+            com.Connection = con.AbrirConeccion();
+            com.CommandText = "SP_ListarPerfil";
+            com.CommandType = CommandType.StoredProcedure;
+            LeerFilas = com.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            cmbNombrePerfil.DataSource = Tabla;
+            cmbNombrePerfil.DisplayMember = "Nombre";
+            cmbNombrePerfil.ValueMember = "Id_Perfil";
+
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            foreach (DataRow row in Tabla.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["Nombre"]));
+            }
+            cmbNombrePerfil.AutoCompleteCustomSource = coleccion;
+            cmbNombrePerfil.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbNombrePerfil.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //LeerFilas.Close();
+            com.Connection = con.CerrarConeccion();
+        }
+
+        public void ListarSegundoPerfil()
+        {
+            Conexion con = new Conexion();
+            SqlCommand com = new SqlCommand();
+            SqlDataReader LeerFilas;
+            DataTable Tabla = new DataTable();
+            com.Connection = con.AbrirConeccion();
+            com.CommandText = "SP_ListarPerfil";
+            com.CommandType = CommandType.StoredProcedure;
+            LeerFilas = com.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            cmbNombreSegundoPerfil.DataSource = Tabla;
+            cmbNombreSegundoPerfil.DisplayMember = "Nombre";
+            cmbNombreSegundoPerfil.ValueMember = "Id_Perfil";
+
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            foreach (DataRow row in Tabla.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["Nombre"]));
+            }
+            cmbNombreSegundoPerfil.AutoCompleteCustomSource = coleccion;
+            cmbNombreSegundoPerfil.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbNombreSegundoPerfil.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //LeerFilas.Close();
+            com.Connection = con.CerrarConeccion();
+        }
         private void FormAgregarExpediente_Load(object sender, EventArgs e)
         {
             cmbMedidas.SelectedIndex = 0;
@@ -157,27 +254,9 @@ namespace ProyectCasos
             ListarEstado();
             ListarRango();
             ListarSegundaCondicionJuridica();
-
-            DataTable Tabla = new DataTable();
-            com.Connection = con.AbrirConeccion();
-            com.CommandText = "SP_ListarDelito";
-            com.CommandType = CommandType.StoredProcedure;
-            LeerFilas = com.ExecuteReader();
-            Tabla.Load(LeerFilas);
-            cmbDelito.DataSource = Tabla;
-            cmbDelito.DisplayMember = "Nombre_Delito";
-            cmbDelito.ValueMember = "Id_Delito";
-
-            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
-            foreach(DataRow row in Tabla.Rows)
-            {
-                coleccion.Add(Convert.ToString(row["Nombre_Delito"]));
-            }
-            cmbDelito.AutoCompleteCustomSource = coleccion;
-            cmbDelito.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            cmbDelito.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            //LeerFilas.Close();
-            com.Connection = con.CerrarConeccion();
+            LitarDelito();
+            LitarPerfil();
+            ListarSegundoPerfil();  
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

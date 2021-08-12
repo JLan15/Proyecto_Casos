@@ -83,5 +83,18 @@ namespace ProyectCasos
             return Tabla;
         }
 
+        /*public DataTable ListarComboPerfil()
+        {
+            DataTable Tabla = new DataTable();
+            com.Connection = con.AbrirConeccion();
+            com.CommandText = "SP_ListarPerfil";
+            com.CommandType = CommandType.StoredProcedure;
+            LeerFilas = com.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            LeerFilas.Close();
+            com.Connection = con.CerrarConeccion();
+            return Tabla;
+        }*/
+
     }
 }
