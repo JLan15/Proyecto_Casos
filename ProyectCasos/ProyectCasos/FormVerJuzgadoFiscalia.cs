@@ -70,7 +70,13 @@ namespace ProyectCasos
             this.Close();
         }
 
-        private void dtgCrearJuzgadoFiscalia_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            FormBorrarJuzgadoFiscalia FrmBorrar = new FormBorrarJuzgadoFiscalia();
+            FrmBorrar.Show();
+        }
+
+        private void dtgCrearJuzgadoFiscalia_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             FormEditarJuzgadoFiscalia FrmEditar = new FormEditarJuzgadoFiscalia();
 
@@ -78,12 +84,6 @@ namespace ProyectCasos
             FrmEditar.txtNombreJuzgadoFiscalia.Text = dtgCrearJuzgadoFiscalia.CurrentRow.Cells[1].Value.ToString();
 
             FrmEditar.Show();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            FormBorrarJuzgadoFiscalia FrmBorrar = new FormBorrarJuzgadoFiscalia();
-            FrmBorrar.Show();
         }
     }
 }

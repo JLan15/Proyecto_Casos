@@ -33,11 +33,6 @@ namespace ProyectCasos
             dtgCrearRango.DataSource = dt;
         }
 
-        private void dtgCrearRango_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void FormVerRango_Load(object sender, EventArgs e)
         {
             try
@@ -75,7 +70,13 @@ namespace ProyectCasos
             this.Close();
         }
 
-        private void dtgCrearRango_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            FormBorrarRango FrmBorrar = new FormBorrarRango();
+            FrmBorrar.Show();
+        }
+
+        private void dtgCrearRango_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             FormEditarRango FrmEditar = new FormEditarRango();
 
@@ -83,12 +84,6 @@ namespace ProyectCasos
             FrmEditar.txtNombreRango.Text = dtgCrearRango.CurrentRow.Cells[1].Value.ToString();
 
             FrmEditar.Show();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            FormBorrarRango FrmBorrar = new FormBorrarRango();
-            FrmBorrar.Show();
         }
     }
 }

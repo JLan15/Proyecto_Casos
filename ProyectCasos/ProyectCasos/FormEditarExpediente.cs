@@ -23,11 +23,17 @@ namespace ProyectCasos
             ListarEstado();
             ListarRango();
             ListarSegundaCondicionJuridica();
+            ListarDelito();
+            ListarPerfil();
+            ListarSegundoPerfil();
 
+        }
+
+        public void ListarDelito()
+        {
             Conexion con = new Conexion();
             SqlCommand com = new SqlCommand();
             SqlDataReader LeerFilas;
-
             DataTable Tabla = new DataTable();
             com.Connection = con.AbrirConeccion();
             com.CommandText = "SP_ListarDelito";
@@ -49,7 +55,62 @@ namespace ProyectCasos
             //LeerFilas.Close();
             com.Connection = con.CerrarConeccion();
         }
-       
+
+        public void ListarPerfil()
+        {
+            Conexion con = new Conexion();
+            SqlCommand com = new SqlCommand();
+            SqlDataReader LeerFilas;
+            DataTable Tabla = new DataTable();
+            com.Connection = con.AbrirConeccion();
+            com.CommandText = "SP_ListarPerfil";
+            com.CommandType = CommandType.StoredProcedure;
+            LeerFilas = com.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            cmbNombrePerfil.DataSource = Tabla;
+            cmbNombrePerfil.DisplayMember = "Nombre";
+            cmbNombrePerfil.ValueMember = "Id_Perfil";
+
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            foreach (DataRow row in Tabla.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["Nombre"]));
+            }
+            cmbNombrePerfil.AutoCompleteCustomSource = coleccion;
+            cmbNombrePerfil.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbNombrePerfil.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //LeerFilas.Close();
+            com.Connection = con.CerrarConeccion();
+        }
+
+        public void ListarSegundoPerfil()
+        {
+            Conexion con = new Conexion();
+            SqlCommand com = new SqlCommand();
+            SqlDataReader LeerFilas;
+            DataTable Tabla = new DataTable();
+            com.Connection = con.AbrirConeccion();
+            com.CommandText = "SP_ListarPerfil";
+            com.CommandType = CommandType.StoredProcedure;
+            LeerFilas = com.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            cmbNombreSegundoPerfil.DataSource = Tabla;
+            cmbNombreSegundoPerfil.DisplayMember = "Nombre";
+            cmbNombreSegundoPerfil.ValueMember = "Id_Perfil";
+
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            foreach (DataRow row in Tabla.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["Nombre"]));
+            }
+            cmbNombreSegundoPerfil.AutoCompleteCustomSource = coleccion;
+            cmbNombreSegundoPerfil.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbNombreSegundoPerfil.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //LeerFilas.Close();
+            com.Connection = con.CerrarConeccion();
+         }
+
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -112,6 +173,9 @@ namespace ProyectCasos
             cmbSegundaCondicion.ValueMember = "Id_Condicion";
             
         }
+
+
+
         /*public void CargarDatosDataGridView()
         {
             Form1 Frm = new Form1();
@@ -146,7 +210,7 @@ namespace ProyectCasos
                     }
                     
                     cn.AbrirConeccion();
-                    SqlCommand com = new SqlCommand("exec dbo.SP_ActualizarExpediente '" + int.Parse(txtIdExp.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "' ,'" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "', '" + txtLugarHechos.Text + "','" + DateTime.Parse(dtpFechaHechos.Text) + "','" + Convert.ToInt32(cmbDelito.SelectedValue) + "', '" + Convert.ToInt32(cmbMedidas.SelectedItem) + "', '" + Convert.ToInt32(cmbReclucion.SelectedItem) + "', '" + Convert.ToInt32(cmbSegundaCondicion.SelectedValue) + "', '" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + txtNum.Text + "', '" + txtCodigo.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRecursoReposicion.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoApelacion.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoAmparo.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoHabeasCorpus.SelectedItem) + "', '" + txtOtro.Text + "', '" + rtxtObservaciones.Text + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
+                    SqlCommand com = new SqlCommand("exec dbo.SP_ActualizarExpediente '" + int.Parse(txtIdExp.Text) + "', '" + Convert.ToInt32(cmbCondicionJuridica.SelectedValue) + "' , '" + Convert.ToInt32(cmbNombrePerfil.SelectedValue) + "','" + Convert.ToInt32(cmbRango.SelectedValue) + "', '" + Convert.ToInt32(cmbDireccionAsignada.SelectedValue) + "', '" + txtLugarHechos.Text + "','" + DateTime.Parse(dtpFechaHechos.Text) + "','" + Convert.ToInt32(cmbDelito.SelectedValue) + "', '" + Convert.ToInt32(cmbMedidas.SelectedItem) + "', '" + Convert.ToInt32(cmbReclucion.SelectedItem) + "', '" + Convert.ToInt32(cmbSegundaCondicion.SelectedValue) + "', '" + Convert.ToInt32(cmbNombreSegundoPerfil.SelectedValue) + "','" + Convert.ToInt32(cmbJuzgadoFiscalia.SelectedValue) + "', '" + txtNum.Text + "', '" + txtCodigo.Text + "', '" + DateTime.Parse(dtpFecha.Text) + "', '" + Convert.ToInt32(cmbEstadoCaso.SelectedValue) + "', '" + Convert.ToInt32(cmbRecursoReposicion.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoApelacion.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoAmparo.SelectedItem) + "', '" + Convert.ToInt32(cmbRecursoHabeasCorpus.SelectedItem) + "', '" + txtOtro.Text + "', '" + txtObservaciones.Text + "', '" + VariablesGlobales.status + "'", cn.AbrirConeccion());
                     com.ExecuteNonQuery();
                     //cn.Close();
                     MessageBox.Show("Datos Actualizados Con Exito", "Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);

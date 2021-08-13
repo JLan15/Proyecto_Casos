@@ -89,6 +89,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.cmbNombreSegundoPerfil = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -392,7 +393,7 @@
             this.btnGuardar.IdleFillColor = System.Drawing.Color.LimeGreen;
             this.btnGuardar.IdleForecolor = System.Drawing.Color.White;
             this.btnGuardar.IdleLineColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(706, 640);
+            this.btnGuardar.Location = new System.Drawing.Point(706, 645);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(241, 50);
@@ -819,9 +820,9 @@
             this.label23.Location = new System.Drawing.Point(40, 136);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(165, 20);
+            this.label23.Size = new System.Drawing.Size(189, 20);
             this.label23.TabIndex = 104;
-            this.label23.Text = "Nombre Completo:";
+            this.label23.Text = "Nombre del Acusado:";
             // 
             // cmbNombreSegundoPerfil
             // 
@@ -840,9 +841,22 @@
             this.label24.Location = new System.Drawing.Point(40, 453);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(165, 20);
+            this.label24.Size = new System.Drawing.Size(185, 20);
             this.label24.TabIndex = 106;
-            this.label24.Text = "Nombre Completo:";
+            this.label24.Text = "Nombre Perjudicado:";
+            // 
+            // bunifuSeparator4
+            // 
+            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
+            this.bunifuSeparator4.LineThickness = 1;
+            this.bunifuSeparator4.Location = new System.Drawing.Point(0, 632);
+            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuSeparator4.Name = "bunifuSeparator4";
+            this.bunifuSeparator4.Size = new System.Drawing.Size(1649, 10);
+            this.bunifuSeparator4.TabIndex = 75;
+            this.bunifuSeparator4.Transparency = 255;
+            this.bunifuSeparator4.Vertical = false;
             // 
             // FormAgregarExpediente
             // 
@@ -850,6 +864,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(67)))), ((int)(((byte)(129)))));
             this.ClientSize = new System.Drawing.Size(1653, 700);
+            this.Controls.Add(this.bunifuSeparator4);
             this.Controls.Add(this.cmbNombreSegundoPerfil);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.cmbNombrePerfil);
@@ -979,5 +994,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox cmbNombrePerfil;
         private System.Windows.Forms.Label label23;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator4;
     }
 }

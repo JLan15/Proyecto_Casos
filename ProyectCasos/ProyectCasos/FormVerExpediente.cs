@@ -298,26 +298,28 @@ namespace ProyectCasos
 
             FrmEditar.txtIdExp.Text = dtgCrearExpediente.CurrentRow.Cells[0].Value.ToString();
             FrmEditar.cmbCondicionJuridica.Text = dtgCrearExpediente.CurrentRow.Cells[1].Value.ToString();
-            FrmEditar.cmbRango.Text = dtgCrearExpediente.CurrentRow.Cells[2].Value.ToString();
-            FrmEditar.cmbDireccionAsignada.Text = dtgCrearExpediente.CurrentRow.Cells[3].Value.ToString();
-            FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[4].Value.ToString();
-            FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[5].Value.ToString();
-            FrmEditar.cmbDelito.Text = dtgCrearExpediente.CurrentRow.Cells[6].Value.ToString();
-            FrmEditar.cmbMedidas.Text = dtgCrearExpediente.CurrentRow.Cells[7].Value.ToString();
-            FrmEditar.cmbReclucion.Text = dtgCrearExpediente.CurrentRow.Cells[8].Value.ToString();
-            FrmEditar.cmbSegundaCondicion.Text = dtgCrearExpediente.CurrentRow.Cells[9].Value.ToString();
-            FrmEditar.cmbJuzgadoFiscalia.Text = dtgCrearExpediente.CurrentRow.Cells[10].Value.ToString();
-            FrmEditar.txtNum.Text = dtgCrearExpediente.CurrentRow.Cells[11].Value.ToString();
-            FrmEditar.txtCodigo.Text = dtgCrearExpediente.CurrentRow.Cells[12].Value.ToString();
-            FrmEditar.dtpFecha.Text = dtgCrearExpediente.CurrentRow.Cells[13].Value.ToString();
-            FrmEditar.cmbEstadoCaso.Text = dtgCrearExpediente.CurrentRow.Cells[14].Value.ToString();
-            FrmEditar.cmbRecursoReposicion.Text = dtgCrearExpediente.CurrentRow.Cells[15].Value.ToString();
-            FrmEditar.cmbRecursoApelacion.Text = dtgCrearExpediente.CurrentRow.Cells[16].Value.ToString();
-            FrmEditar.cmbRecursoAmparo.Text = dtgCrearExpediente.CurrentRow.Cells[17].Value.ToString();
-            FrmEditar.cmbRecursoHabeasCorpus.Text = dtgCrearExpediente.CurrentRow.Cells[18].Value.ToString();
-            FrmEditar.txtOtro.Text = dtgCrearExpediente.CurrentRow.Cells[19].Value.ToString();
-            FrmEditar.rtxtObservaciones.Text = dtgCrearExpediente.CurrentRow.Cells[20].Value.ToString();
-            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[21].Value.ToString();
+            FrmEditar.cmbNombrePerfil.Text = dtgCrearExpediente.CurrentRow.Cells[2].Value.ToString();
+            FrmEditar.cmbRango.Text = dtgCrearExpediente.CurrentRow.Cells[3].Value.ToString();
+            FrmEditar.cmbDireccionAsignada.Text = dtgCrearExpediente.CurrentRow.Cells[4].Value.ToString();
+            FrmEditar.txtLugarHechos.Text = dtgCrearExpediente.CurrentRow.Cells[5].Value.ToString();
+            FrmEditar.dtpFechaHechos.Text = dtgCrearExpediente.CurrentRow.Cells[6].Value.ToString();
+            FrmEditar.cmbDelito.Text = dtgCrearExpediente.CurrentRow.Cells[7].Value.ToString();
+            FrmEditar.cmbMedidas.Text = dtgCrearExpediente.CurrentRow.Cells[8].Value.ToString();
+            FrmEditar.cmbReclucion.Text = dtgCrearExpediente.CurrentRow.Cells[9].Value.ToString();
+            FrmEditar.cmbSegundaCondicion.Text = dtgCrearExpediente.CurrentRow.Cells[10].Value.ToString();
+            FrmEditar.cmbNombreSegundoPerfil.Text = dtgCrearExpediente.CurrentRow.Cells[11].Value.ToString();
+            FrmEditar.cmbJuzgadoFiscalia.Text = dtgCrearExpediente.CurrentRow.Cells[12].Value.ToString();
+            FrmEditar.txtNum.Text = dtgCrearExpediente.CurrentRow.Cells[13].Value.ToString();
+            FrmEditar.txtCodigo.Text = dtgCrearExpediente.CurrentRow.Cells[14].Value.ToString();
+            FrmEditar.dtpFecha.Text = dtgCrearExpediente.CurrentRow.Cells[15].Value.ToString();
+            FrmEditar.cmbEstadoCaso.Text = dtgCrearExpediente.CurrentRow.Cells[16].Value.ToString();
+            FrmEditar.cmbRecursoReposicion.Text = dtgCrearExpediente.CurrentRow.Cells[17].Value.ToString();
+            FrmEditar.cmbRecursoApelacion.Text = dtgCrearExpediente.CurrentRow.Cells[18].Value.ToString();
+            FrmEditar.cmbRecursoAmparo.Text = dtgCrearExpediente.CurrentRow.Cells[19].Value.ToString();
+            FrmEditar.cmbRecursoHabeasCorpus.Text = dtgCrearExpediente.CurrentRow.Cells[20].Value.ToString();
+            FrmEditar.txtOtro.Text = dtgCrearExpediente.CurrentRow.Cells[21].Value.ToString();
+            FrmEditar.txtObservaciones.Text = dtgCrearExpediente.CurrentRow.Cells[22].Value.ToString();
+            VariablesGlobales.status = dtgCrearExpediente.CurrentRow.Cells[23].Value.ToString();
 
             if (VariablesGlobales.status == "Activo")
             {

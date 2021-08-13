@@ -153,7 +153,7 @@ namespace ProyectCasos
             //dtgCrearExpediente.DataSource = dt;
         }
 
-        public void LitarDelito()
+        public void ListarDelito()
         {
             Conexion con = new Conexion();
             SqlCommand com = new SqlCommand();
@@ -180,7 +180,7 @@ namespace ProyectCasos
             com.Connection = con.CerrarConeccion();
         }
 
-        public void LitarPerfil()
+        public void ListarPerfil()
         {
             Conexion con = new Conexion();
             SqlCommand com = new SqlCommand();
@@ -254,8 +254,8 @@ namespace ProyectCasos
             ListarEstado();
             ListarRango();
             ListarSegundaCondicionJuridica();
-            LitarDelito();
-            LitarPerfil();
+            ListarDelito();
+            ListarPerfil();
             ListarSegundoPerfil();  
         }
 

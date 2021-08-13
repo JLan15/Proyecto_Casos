@@ -38,11 +38,6 @@ namespace ProyectCasos
             this.Close();
         }
 
-        private void dtgCrearEstadoCasos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void FormVerEstadoCasos_Load(object sender, EventArgs e)
         {
             try
@@ -75,7 +70,13 @@ namespace ProyectCasos
             FrmAgregar.Show();
         }
 
-        private void dtgCrearEstadoCasos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            FormBorrarEstadoCasos FrmBorrar = new FormBorrarEstadoCasos();
+            FrmBorrar.Show();
+        }
+
+        private void dtgCrearEstadoCasos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             FormEditarEstadoCasos FrmEditar = new FormEditarEstadoCasos();
 
@@ -83,12 +84,6 @@ namespace ProyectCasos
             FrmEditar.txtNombreEstadoCasos.Text = dtgCrearEstadoCasos.CurrentRow.Cells[1].Value.ToString();
 
             FrmEditar.Show();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            FormBorrarEstadoCasos FrmBorrar = new FormBorrarEstadoCasos();
-            FrmBorrar.Show();
         }
     }
 }

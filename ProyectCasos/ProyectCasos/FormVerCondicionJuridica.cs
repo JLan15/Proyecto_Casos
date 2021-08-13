@@ -88,25 +88,20 @@ namespace ProyectCasos
 
         }
 
-        private void dtgCrearCondicion_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            FormEditarCondicionJuridica FrmEditar = new FormEditarCondicionJuridica();
-
-            FrmEditar.txtIdCondicionJuridica.Text= dtgCrearCondicion.CurrentRow.Cells[0].Value.ToString();
-            FrmEditar.txtNombreCondicionJuridica.Text= dtgCrearCondicion.CurrentRow.Cells[1].Value.ToString();
-        
-            FrmEditar.Show();
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             FormBorrarCondicionJuridica FrmBorrar = new FormBorrarCondicionJuridica();
             FrmBorrar.Show();
         }
 
-        private void dtgCrearCondicion_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dtgCrearCondicion_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            FormEditarCondicionJuridica FrmEditar = new FormEditarCondicionJuridica();
 
+            FrmEditar.txtIdCondicionJuridica.Text = dtgCrearCondicion.CurrentRow.Cells[0].Value.ToString();
+            FrmEditar.txtNombreCondicionJuridica.Text = dtgCrearCondicion.CurrentRow.Cells[1].Value.ToString();
+
+            FrmEditar.Show();
         }
     }
 }

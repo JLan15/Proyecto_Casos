@@ -38,11 +38,6 @@ namespace ProyectCasos
             dtgCrearDireccion.DataSource = dt;
         }
 
-        private void dtgCrearExpediente_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void FormVerDireccionAsignada_Load(object sender, EventArgs e)
         {
            
@@ -86,7 +81,13 @@ namespace ProyectCasos
             CargarDatosDataGridViewDireccion();
         }
 
-        private void dtgCrearDireccion_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            FormBorrarDireccionAsignada FrmBorrar = new FormBorrarDireccionAsignada();
+            FrmBorrar.Show();
+        }
+
+        private void dtgCrearDireccion_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             FormEditarDireccionAsignada FrmEditar = new FormEditarDireccionAsignada();
 
@@ -94,12 +95,6 @@ namespace ProyectCasos
             FrmEditar.txtNombreDireccionAsignada.Text = dtgCrearDireccion.CurrentRow.Cells[1].Value.ToString();
 
             FrmEditar.Show();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            FormBorrarDireccionAsignada FrmBorrar = new FormBorrarDireccionAsignada();
-            FrmBorrar.Show();
         }
     }
 }

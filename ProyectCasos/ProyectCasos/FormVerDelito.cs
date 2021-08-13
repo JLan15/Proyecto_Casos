@@ -76,16 +76,6 @@ namespace ProyectCasos
             CargarDatosDataGridViewDelito();
         }
 
-        private void dtgCrearDelito_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            FormEditarDelito FrmEditar = new FormEditarDelito();
-
-            FrmEditar.txtIdDelito.Text = dtgCrearDelito.CurrentRow.Cells[0].Value.ToString();
-            FrmEditar.txtNombreDelito.Text = dtgCrearDelito.CurrentRow.Cells[1].Value.ToString();
-
-            FrmEditar.Show();
-        }
-
         private void btnRefrescar_Click_1(object sender, EventArgs e)
         {
             CargarDatosDataGridViewDelito();
@@ -97,9 +87,14 @@ namespace ProyectCasos
             FrmBorrar.Show();
         }
 
-        private void dtgCrearDelito_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgCrearDelito_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            FormEditarDelito FrmEditar = new FormEditarDelito();
 
+            FrmEditar.txtIdDelito.Text = dtgCrearDelito.CurrentRow.Cells[0].Value.ToString();
+            FrmEditar.txtNombreDelito.Text = dtgCrearDelito.CurrentRow.Cells[1].Value.ToString();
+
+            FrmEditar.Show();
         }
     }
     
